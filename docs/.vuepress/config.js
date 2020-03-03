@@ -6,12 +6,11 @@ module.exports = {
 		repo: 'https://github.com/ogranadagl/gorilla-cast',
 		repoLabel: 'Repo',
 		docsDir: 'src',
-		editLinks: true,
+		editLinks: false,
 		logo: '/image.png',
-		editLinkText: 'Found a bug? Help me improve this page!',
 		nav: [
 			{ text: 'Home', link: '/' },
-			{ text: 'Learn', link: '/learn/' }
+			{ text: 'Introduction', link: '/intro/' }
 		],
 		version: '0.11.0-beta'
 	},

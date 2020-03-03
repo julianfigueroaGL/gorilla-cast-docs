@@ -2,15 +2,15 @@
 home: true
 heroImage: /image.png
 heroText: Vue JS Bootcamp
-tagline: This a guide that will bring users to become a solid developer on Vue Js.
+tagline: Interested on learning Vue.js? This bootcamp will walk you through a practical process to learn it.
 actionText: Get Started →
-actionLink: /learn/
+actionLink: /intro/
 features:
-  - title: Relevant Terms
-    details: In this topic we will cover → Data Models, Virtual DOM, Flux Design Pattern, Installation, VUE-CLI, VUE-UI, among others
-  - title: Vue JS Lifecycle
-    details: In this topic we will cover → App Setup, Plugings usage, Suggested folder, Components, Lifecycle Hooks, Routing, among others
+  - title: Why Vue.js?
+    details: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s 
+  - title: Why a bootcamp?
+    details: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
   - title: Vue.js Advanced features
-    details: In this topic we will cover → Vuex, Testing, Building process, Good practices, Vue 3, among others
+    details: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
 footer: MIT Licensed | Created by Gorilla Logic. 2020
 ---
