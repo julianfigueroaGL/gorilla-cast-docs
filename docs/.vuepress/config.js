@@ -1,6 +1,7 @@
 module.exports = {
 	title: 'Vue Js Bootcamp',
 	dest: './public',
+	base: '/gorilla-cast-docs/',
 	themeConfig: {
 		repo: 'https://github.com/ogranadagl/gorilla-cast',
 		repoLabel: 'Repo',
