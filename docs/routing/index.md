@@ -19,7 +19,7 @@ Include vue-router after Vue and it will install itself automatically:
 ### Using Npm / Yarn
 
 ```sh
-npm install vue-router
+npm install vue-router --save
 
 //or
 
