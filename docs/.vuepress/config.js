@@ -24,6 +24,19 @@ module.exports = {
 					['/lifecycle/components/components', 'Components'],
 					['/lifecycle/hooks/hooks', 'Hooks']
 				]
+			},
+			['/testing/', 'Testing'],
+			['/build/', 'Build'],
+			{
+				title: 'Best Practices',
+				collapsable: false,
+				children: [
+					['/best-practices/', 'Introduction'],
+					['/best-practices/components/components', 'Components'],
+					['/best-practices/templates/templates', 'Templates'],
+					['/best-practices/routing/routing', 'Routing'],
+					['/best-practices/vuex/vuex', 'Vuex']
+				]
 			}
 		]
 	},
