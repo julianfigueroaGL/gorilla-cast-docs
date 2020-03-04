@@ -34,6 +34,17 @@ module.exports = {
 					['/communication/communication-task/task', 'Communication Task'],
 				]
 			},
+			{
+				title: 'Routing',
+				collapsable: false,
+				children: [
+					['/routing/', 'Introduction'],
+					['/routing/basic-routing/basic', 'Basic Routing'],
+					['/routing/dynamic-routing/dynamic', 'Dynamic Routing'],
+					['/routing/lazy-loading/lazy-loading', 'Lazy Loading'],
+					['/routing/routing-task/task', 'Routing Task'],
+				]
+			},
 			['/testing/', 'Testing'],
 			['/build/', 'Build'],
 			{
