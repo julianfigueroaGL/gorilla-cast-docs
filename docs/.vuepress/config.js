@@ -15,11 +15,7 @@ module.exports = {
 		version: '0.11.0-beta',
 		sidebar: [
 			'',
-			{
-				title: 'Basics',
-				collapsable: false,
-				children: [['/basics/', 'Basics']]
-			},
+			['/basics/', 'Basics'],
 			{
 				title: 'Lifecycle',
 				collapsable: false,
