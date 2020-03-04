@@ -1,8 +1,3 @@
----
-sidebar: auto
-type: guide
----
-
 # Vue JS Bootcamp
 
 ## Introduction

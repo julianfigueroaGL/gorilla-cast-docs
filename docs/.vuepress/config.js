@@ -12,7 +12,19 @@ module.exports = {
 			{ text: 'Home', link: '/' },
 			{ text: 'Introduction', link: '/intro/' }
 		],
-		version: '0.11.0-beta'
+		version: '0.11.0-beta',
+		sidebar: [
+			'',
+			{
+				title: 'Lifecycle', 
+				collapsable: false,
+				children: [
+					['/lifecycle/', 'Introduction'],
+					['/lifecycle/components/components', 'Components'],
+					['/lifecycle/hooks/hooks', 'Hooks'],
+				],
+			},
+		]
 	},
 	plugins: [
 		[
