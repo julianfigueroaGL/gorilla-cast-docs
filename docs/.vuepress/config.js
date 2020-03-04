@@ -16,14 +16,19 @@ module.exports = {
 		sidebar: [
 			'',
 			{
-				title: 'Lifecycle', 
+				title: 'Basics',
+				collapsable: false,
+				children: [['/basics/', 'Basics']]
+			},
+			{
+				title: 'Lifecycle',
 				collapsable: false,
 				children: [
 					['/lifecycle/', 'Introduction'],
 					['/lifecycle/components/components', 'Components'],
-					['/lifecycle/hooks/hooks', 'Hooks'],
-				],
-			},
+					['/lifecycle/hooks/hooks', 'Hooks']
+				]
+			}
 		]
 	},
 	plugins: [

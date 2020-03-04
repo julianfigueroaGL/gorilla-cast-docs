@@ -1,11 +1,6 @@
----
-sidebar: auto
-type: guide
----
+# Basics
 
-# Vue JS Bootcamp
-
-### Relevant terms
+## Relevant terms
 
 In this topic we will cover => Data Models, Virtual DOM, Flux Design Pattern, Installation, VUE-CLI, VUE-UI, among others
 
@@ -24,7 +19,7 @@ Vue accomplishes this by building a virtual DOM to keep track of the changes it 
 The components in Flux's architecture interact more like an EventBus and less like an MVC. As mentioned earlier, Flux is not actually a library or a framework, it is a new kind of architecture that Facebook created to work with React:
 
 - Actions: Helpers that pass data to the Dispatcher
-- Dispatcher: REceives these Actions and broadcast paylodas to registered callbacks
+- Dispatcher: Receives these Actions and broadcast paylodas to registered callbacks
 - Stores: Act as a container for application state and logic
 - Controller Views: React Components that grab the state from Stores and pass it down via props to child components
 
@@ -69,4 +64,12 @@ npm install
 npm run serve
 ```
 
+::: tip
 You should now be able to visit [http://localhost:8080](http://localhost:8080) to see your local server running!
+:::
+
+## Debugging your Vue Application
+
+When developers creates Modern Web Applications (SPA), they use several different libraries, because of this is needed to debbug the Web App
+
+[Vue Debbug Process](https://vuejs.org/v2/cookbook/debugging-in-vscode.html)
