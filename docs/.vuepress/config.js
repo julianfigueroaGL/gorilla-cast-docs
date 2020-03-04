@@ -25,6 +25,15 @@ module.exports = {
 					['/lifecycle/hooks/hooks', 'Hooks']
 				]
 			},
+			{
+				title: 'Communication',
+				collapsable: false,
+				children: [
+					['/communication/props/props', 'Props'],
+					['/communication/event-emitter/emitter', 'Event Emitter Pattern'],
+					['/communication/communication-task/task', 'Communication Task'],
+				]
+			},
 			['/testing/', 'Testing'],
 			['/build/', 'Build'],
 			{
