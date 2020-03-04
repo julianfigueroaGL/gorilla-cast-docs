@@ -45,6 +45,15 @@ module.exports = {
 					['/routing/routing-task/task', 'Routing Task'],
 				]
 			},
+			{
+				title: 'Vuex',
+				collapsable: false,
+				children: [
+					['/stores/', 'Flux Pattern'],
+					['/stores/vuex/vuex', 'Vuex'],
+					['/stores/vuex-task/task', 'Vuex Task']
+				]
+			},
 			['/testing/', 'Testing'],
 			['/build/', 'Build'],
 			{
