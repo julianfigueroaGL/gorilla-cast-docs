@@ -1,4 +1,4 @@
-### Basic Routing
+# Basic Routing
 
 Defining routes for a Vue application using `vue-router` is deadly simple, by defining an Array of objects with the following properties. [API Reference](https://router.vuejs.org/api/#router-construction-options)
 

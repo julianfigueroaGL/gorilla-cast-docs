@@ -1,4 +1,4 @@
-### Introduction
+# Routing
 
 Now we have all the basic concepts of vuejs, its components & lifecycles and how to communicate between them. So far so good, but most of modern UI applications are not simply static sites right?. How about navigating between pages and dynamically load different components based on that navigation? Vuejs provides a powerfull plugin library for those use cases where your application will dynamically load different components based on some kind of routing. That's all we know as Single Page Applications.
 
