@@ -43,7 +43,7 @@ You don't need to do this when using global script tags.
 
 At the center of every Vuex application is the **store**. A "store" is basically a container that holds your application **state**. There are two things that make a Vuex store different from a plain global object:
 
-![Vuex Diagram](../../.vuepress/public/vuex-workflow.png)
+<img :src="$withBase('/vuex-workflow.png')" alt="Vuex Diagram">
 
 1. Vuex stores are reactive. When Vue components retrieve state from it, they will reactively and efficiently update if the store's state changes.
 
