@@ -30,7 +30,8 @@ module.exports = {
 				children: [
 					['/communication/props/props', 'Props'],
 					['/communication/event-emitter/emitter', 'Event Emitter Pattern'],
-					['/communication/communication-task/task', 'Communication Task'],
+					['/communication/communication-task/task', 'Project Tasks'],
+					['/communication/resolution/resolution', 'Resolution'],
 				]
 			},
 			{
@@ -41,7 +42,8 @@ module.exports = {
 					['/routing/basic-routing/basic', 'Basic Routing'],
 					['/routing/dynamic-routing/dynamic', 'Dynamic Routing'],
 					['/routing/lazy-loading/lazy-loading', 'Lazy Loading'],
-					['/routing/routing-task/task', 'Routing Task'],
+					['/routing/routing-task/task', 'Project Tasks'],
+					['/routing/resolution/resolution', 'Resolution'],
 				]
 			},
 			{
@@ -50,7 +52,8 @@ module.exports = {
 				children: [
 					['/stores/', 'Flux Pattern'],
 					['/stores/vuex/vuex', 'Vuex'],
-					['/stores/vuex-task/task', 'Vuex Task']
+					['/stores/vuex-task/task', 'Project Tasks'],
+					['/stores/resolution/resolution', 'Resolution'],
 				]
 			}
 		]
