@@ -15,15 +15,16 @@ module.exports = {
 		version: '0.11.0-beta',
 		sidebar: [
 			'',
+			['/basics/', 'Basics'],
 			{
-				title: 'Lifecycle', 
+				title: 'Lifecycle',
 				collapsable: false,
 				children: [
 					['/lifecycle/', 'Introduction'],
 					['/lifecycle/components/components', 'Components'],
-					['/lifecycle/hooks/hooks', 'Hooks'],
-				],
-			},
+					['/lifecycle/hooks/hooks', 'Hooks']
+				]
+			}
 		]
 	},
 	plugins: [
