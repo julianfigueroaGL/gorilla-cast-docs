@@ -97,6 +97,6 @@ export default FirstPlugin;
 When your plugin is ready, it can be distributed to the community via [NPM](https://www.npmjs.com/) or [Github](https://github.com/).
 Also you can open a pull request to the official [Vue repository](https://github.com/vuejs/awesome-vue)
 
-## External Resources
+## Additional Links
 
 [Official documentation](https://vuejs.org/v2/guide/plugins.html)

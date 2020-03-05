@@ -14,7 +14,7 @@ Vue 3 will be faster, lighter and more maintainable accoridng to Evan You
 ### Composition API
 
 This feature will allow for a function way of writing your component, inspired by React Hooks.
-Now you can encasulate kogic into _composition functions_ and reuse that logic across components.
+Now you can encasulate kogic into `composition functions` and reuse that logic across components.
 
 ### API Reference
 
@@ -30,7 +30,7 @@ The API has been renamed from **Functions API** to **Composition API** along the
 - Optimized Slots Generations
 - Monomorphic Calls
 
-## Learn Vue 3
+## Additional Links
 
 - [Vue 3 - Start Using it Today](https://www.vuemastery.com/blog/vue-3-start-using-it-today/)
 - [Vue 3 & A First Look at the Composition API](https://www.youtube.com/watch?v=V-xK3sbc7xI&ref=madewithvuejs.com)

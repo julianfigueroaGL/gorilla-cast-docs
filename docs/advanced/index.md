@@ -2,8 +2,11 @@
 
 Some of the advanced topics of Vue Js
 
-- [Vue 3](/advanced/vue3/vue3/)
-- [Configurations](/advanced/configurations/configurations/)
-- [Plugins](/advanced/plugins/plugins/)
-- [Mixins](/advanced/mixins/mixins/)
-- [Animations](/advanced/animations/animations/)
+1. [Vue 3](/advanced/vue3/vue3/)
+2. [Configurations](/advanced/configurations/configurations/)
+3. [Plugins](/advanced/plugins/plugins/)
+4. [Mixins](/advanced/mixins/mixins/)
+5. [Animations](/advanced/animations/animations/)
+6. [PWA](/advanced/pwa/pwa/)
+7. [Server Side Rendering](/advanced/ssr/ssr/)
+8. [Nuxt](/advanced/nuxt/nuxt/)

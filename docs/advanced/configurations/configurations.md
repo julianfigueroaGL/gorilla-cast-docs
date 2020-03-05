@@ -28,7 +28,7 @@ npm install extract-text-webpack-plugin --save-dev
 
 You can define custom language blocks inside `*.vue` files. The content of a custom block will be processed by the loaders specified in the `loaders` object of `vue-loader` options and then required by the component module.
 
-## External Resources
+## Additional Links
 
 [Vue Loader](https://vue-loader-v14.vuejs.org/en/)
 [Vue CLI - Configuration Reference](https://cli.vuejs.org/config/#global-cli-config)

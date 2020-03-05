@@ -51,6 +51,6 @@ The output from that would we printing first the Mixin console and then the one 
 🤘🏼 from the component.
 ```
 
-## Addition links
+## Additional Links
 
 [Official documentation](https://vuejs.org/v2/guide/mixins.html)
