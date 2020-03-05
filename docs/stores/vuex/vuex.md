@@ -43,7 +43,7 @@ You don't need to do this when using global script tags.
 
 At the center of every Vuex application is the **store**. A "store" is basically a container that holds your application **state**. There are two things that make a Vuex store different from a plain global object:
 
-![Vuex Diagram](../../.vuepress/public/vuex-workflow.png)
+<img :src="$withBase('/vuex-workflow.png')" alt="Vuex Diagram">
 
 1. Vuex stores are reactive. When Vue components retrieve state from it, they will reactively and efficiently update if the store's state changes.
 
@@ -53,14 +53,299 @@ At the center of every Vuex application is the **store**. A "store" is basically
 
 ### State
 
+The State is the application data that components will be reflecting to. State is a single object and it contains all the application state, this will serve as the **single source of truth**. This is primarily located in the _Store_.
+
+State is a plain old javascript object that reflects the application state at certain point of time.
+
+```js
+// Store instantiation
+const store = new Vuex.Store({
+  state = {
+    count: 0
+  };
+};
+```
+
+The way to display the _State_ inside the store in our Vue components is through computed properties. Taking adventage of the reactivity of Vuex and computed properties whenever `store.state.count changes[], it will cause the computed property to re-evaluate, and trigger associated DOM updates.
+
+```vue
+<template>
+  <div>
+    <span>{{ counter }}</span>
+  </div>
+</template>
+<script>
+export default {
+  name: "SimpleCounter",
+  computed: {
+    counter() {
+      return this.$state.count;
+    }
+  }
+};
+</script>
+```
+
+Vuex offers a set of helpers functions in order to decouple components from the store. The `mapState` helper function generates a computed getter function for us and makes it available in our components.
+
+```vue
+<template>
+  <div>
+    <span>{{ counter }}</span>
+  </div>
+</template>
+<script>
+import { mapState } from "vuex";
+
+export default {
+  name: "SimpleCounter",
+  computed: mapState(["counter"])
+
+  /** as mapState is an object, using it with
+  additional properties will be as follows:
+
+  computed: {
+    ...mapState(["counter"]),
+    otherComputedProperty() {}
+  };
+ **/
+};
+</script>
+```
+
 ### Getters
+
+You can think of them as computed properties for the _Store_. Like computed properties, a getter result is cached based on its dependencies, and will only re-evaluate when some of its dependencies have changed. Easy way to make use of getters in Vue components is by leveraging the `mapGetters` helper function.
+
+Getters are really helpfull when we need derived state from the store like this:
+
+```javascript
+computed: {
+  todosCompletedCount() {
+    return this.$store.todos.filter.(todo => todo.completed).length;
+  }
+}
+```
+
+Now imagine if more than one component needs to make use of this, resulting in a bunch of duplicated code.
+
+Vuex allows us to define "getters" in the store. You can think of them as computed properties for stores. Like computed properties, a getter's result is cached based on its dependencies, and will only re-evaluate when some of its dependencies have changed.
+
+Getters will receive the state as their 1st argument:
+
+```javascript
+// Store instantiation
+const store = new Vuex.Store({
+  // State
+  state: {
+    todos: [
+      { id: 1, text: "Todo One", completed: true },
+      { id: 2, text: "Todo Two", completed: false }
+    ]
+  },
+  // Getters
+  getters: {
+    completedTodos: state => {
+      return state.todos.filter(todo => todo.completed);
+    }
+  }
+});
+```
+
+The `mapGetters` helper simply maps store getters to local computed properties:
+
+```vue
+<template>
+  <div>
+    <span>Completed todo count {{ completedTodos }}</span>
+  </div>
+</template>
+<script>
+import { mapGetters } from "vuex";
+
+export default {
+  name: "SimpleTodoCounter",
+  computed: {
+    ...mapGetters(["completedTodos"])
+  }
+};
+</script>
+```
+
 ### Mutations
+
+The only way to actually change state in a Vuex store is by committing a mutation. Vuex mutations are very similar to events: each mutation has a string type and a handler. The handler function is where we perform actual state modifications, it will receive the state as the first argument and any payload as the second argument:
+
+```javascript
+// Store instantiation
+const store = new Vuex.Store({
+  // State
+  state: {
+    count: 0
+  },
+  mutations: {
+    increment(state) {
+      state.count++;
+    },
+    // mutation with a payload
+    incrementBy(state, payload) {
+      state.count += n;
+    }
+  }
+});
+```
+
+This way you can use mutations in components as follows:
+
+```vue
+<template>
+<div>
+  <span>{{ counter }}
+  <button @:click="increment">Increment</button>
+  <button @:click="incrementByTen">Increment by Ten</button>
+</div>
+</template>
+
+<script>
+import { mapState } from 'vuex';
+
+export default {
+  name: 'Counter',
+  methods: {
+    increment() {
+      this.$store.commit('increment');
+    },
+    incrementByTen(){
+      this.$store.commit('incrementBy', 10)
+    }
+  },
+  computed: mapState(['counter']) // this returns state.count
+}
+</script>
+```
+
+There is also a `mapMutations` helper function that will map the mutations into the components instance
+
+```vue
+<template>
+<div>
+  <span>{{ counter }}
+  <button @:click="increment">Increment</button>
+  <button @:click="incrementBy(10)">Increment by Ten</button>
+</div>
+</template>
+
+<script>
+import { mapState, mapMutations} from 'vuex';
+
+export default {
+  name: 'Counter',
+  /** maps this.increment and this.incrementBy  to
+   * `this.$store.commit('increment')` & √`this.$store.commit('incrementBy', amount)`
+   * respectively  **/
+  methods: mapMutations(['increment','incrementBy']),
+  computed: mapState(['counter']) // this returns state.count
+}
+</script>
+```
+
 ### Actions
+
+Actions are similar to mutation only difference being action commits mutations and actions can contain arbitrary asynchronous operations.
+Let's register a simple action:
+
+```js
+const store = new Vuex.Store({
+  state: {
+    count: 0
+  },
+  mutations: {
+    increment(state) {
+      state.count++;
+    }
+  },
+  actions: {
+    increment(context) {
+      context.commit("increment");
+    },
+    incrementBy(context) {
+      context.commit("increment");
+    }
+  }
+});
+```
+
+Actions are triggered with the `store.dispatch` method.
+
+```js
+store.dispatch("increment");
+```
+
+This might sound similar to mutations. But here's the deal, **Mutations are sycnronous** actions don't. This takes a lot of importance when we may need side effects in our application
+
+```js
+actions: {
+  // ES6 argument destructuring
+  incrementAsync ({ commit }) {
+    setTimeout(() => {
+      commit('increment')
+    }, 1000)
+  }
+}
+```
+
+In a similar fashion Vuex provides a `mapActions` helper function that will make available all the actions passed as an argument to our component instance.
+
+```vue
+<template>
+<div>
+  <span>{{ counter }}
+  <button @:click="increment">Increment</button>
+</div>
+</template>
+
+<script>
+import { mapState, mapActions } from 'vuex';
+
+export default {
+  name: 'Counter',
+  // maps this.increment  `this.$store.dispatch('increment')`
+  methods: mapActions(['increment']),
+  computed: mapState(['counter']) // this returns state.count
+}
+</script>
+```
+
 ### Modules
 
+Building a large scale application could amount to a large amount of data in the store. Modules comes in as a rescue here serving as a container for all stores. Each module can contain its own state, mutations, actions, getters, and even nested modules - it's fractal all the way down:
 
+```js
+const moduleA = {
+  state: { ... },
+  mutations: { ... },
+  actions: { ... },
+  getters: { ... }
+}
 
-### The Simplest Store - Counter Example
+const moduleB = {
+  state: { ... },
+  mutations: { ... },
+  actions: { ... }
+}
+
+const store = new Vuex.Store({
+  modules: {
+    a: moduleA,
+    b: moduleB
+  }
+})
+
+store.state.a // -> `moduleA`'s state
+store.state.b // -> `moduleB`'s state
+```
+
+## Example
 
 After [installing Vuex](/stores/vuex/vuex.html#installation), let's create a store. It is pretty straightforward - just provide an initial state object, and some mutations:
 
@@ -131,17 +416,15 @@ Using store state in a component simply involves returning the state within a co
 Here's the complete example:
 
 <iframe
-     src="https://codesandbox.io/embed/elegant-bogdan-e92qy?fontsize=14&hidenavigation=1&theme=dark&view=editor"
+     src="https://codesandbox.io/embed/simplest-counter-example-e92qy?fontsize=14&hidenavigation=1&module=%2Fsrc%2FApp.vue&theme=dark&view=editor"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-     title="elegant-bogdan-e92qy"
+     title="Simplest counter example"
      allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
      sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
    ></iframe>
 
-## Examples
-
-Data modeling is the process of creating a data model
-
-> A data model is the process of design a data base structure that organizes elements of data.
-
 ## Additional Links
+
+- [Vuex](https://vuex.vuejs.org/) - Vuex official docs.
+
+- Additional examples - [Vuex](https://github.com/vuejs/vuex#examples)

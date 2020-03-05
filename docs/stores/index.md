@@ -6,7 +6,7 @@ Flux is an architectural application pattern introduced by Facebook for building
 
 Data in a _Flux application_ flows in a single direction:
 
-![Flux data flow ](../.vuepress/public/flux-pattern.png)
+<img :src="$withBase('/flux-pattern.png')" alt="Flux data flow">
 
 Flux eschews MVC in favor of a **unidirectional** data flow. When a user interacts with a **_View_**, the view _propagates_ an **_action_** through a central **_dispatcher_**, to the various **_stores_** that hold the application's data and business logic, which updates all of the **_views_** that are affected. This allows the store to send updates without specifying how to transition views between states.
 
