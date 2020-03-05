@@ -14,16 +14,26 @@ module.exports = {
 		],
 		version: '0.11.0-beta',
 		sidebar: [
-			'',
+			'/',
 			['/basics/', 'Basics'],
+			{
+				title: 'Geeting Stared', 
+				collapsable: false,
+				sidebarDepth: 2,
+				children: [
+					['/intro/', 'Introduction'],
+				],
+			},
 			{
 				title: 'Lifecycle',
 				collapsable: false,
+				sidebarDepth: 2,
 				children: [
 					['/lifecycle/', 'Introduction'],
+					['/lifecycle/application/application', 'Application Setup'],
 					['/lifecycle/components/components', 'Components'],
-					['/lifecycle/hooks/hooks', 'Hooks']
-				]
+					['/lifecycle/hooks/hooks', 'Lifecycle Hooks'],
+				],
 			},
 			['/testing/', 'Testing'],
 			['/build/', 'Build'],
