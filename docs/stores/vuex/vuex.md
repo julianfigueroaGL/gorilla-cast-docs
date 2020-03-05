@@ -418,7 +418,7 @@ Here's the complete example:
 <iframe
      src="https://codesandbox.io/embed/simplest-counter-example-e92qy?fontsize=14&hidenavigation=1&module=%2Fsrc%2FApp.vue&theme=dark&view=editor"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-     title="SImplest counter example"
+     title="Simplest counter example"
      allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
      sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
    ></iframe>
