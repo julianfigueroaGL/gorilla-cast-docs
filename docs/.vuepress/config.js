@@ -92,7 +92,9 @@ module.exports = {
 					['/advanced/pwa/pwa', 'PWA'],
 					['/advanced/ssr/ssr', 'Server Side Rendering'],
 					['/advanced/nuxt/nuxt', 'Nuxt'],
-					['/advanced/composition-api/composition-api', 'Composition Api']
+					['/advanced/composition-api/composition-api', 'Composition Api'],
+					['/advanced/components/components', 'Design Patterns'],
+					['/advanced/typescript/typescript', 'TypeScript']
 				]
 			}
 		]

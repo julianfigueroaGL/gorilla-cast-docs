@@ -10,3 +10,5 @@ Some of the advanced topics of Vue Js
 6. [PWA](/advanced/pwa/pwa/)
 7. [Server Side Rendering](/advanced/ssr/ssr/)
 8. [Nuxt](/advanced/nuxt/nuxt/)
+9. [Design Patterns for Components](/advanced/nuxt/nuxt/)
+10. [TypeScript](/advanced/typescript/typescript/)

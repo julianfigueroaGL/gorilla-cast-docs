@@ -20,7 +20,7 @@ vue add pwa
 
 ### Getting Started
 
-- Create a new Vue JS app with CLI
+- Create a new Vue JS app via CLI
 
 ```bash
 npx @vue/cli create pwa-app

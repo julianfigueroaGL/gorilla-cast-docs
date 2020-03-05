@@ -23,13 +23,13 @@ Same goes with our custom components, let's say we have our `<BlogHeaderComponen
 ```
 
 This will render the following:
-![alt text](../../.vuepress/public/props-example.png)
+<img :src="$withBase('/props-example.png')" alt="Prop Example">
 
 So our component definition will look like this:
 
 ```vue
 <template>
-  <h1>🦍 {{ title }}</h1>
+	<h1>🦍 {{ title }}</h1>
 </template>
 
 <script>
@@ -47,16 +47,16 @@ HTML attribute names are case-insensitive, so browsers will interpret any upperc
 
 ```vue
 <template>
-  <div>
-    <h1>🦍 {{ postTitle }}</h1>
-    <p>{{ postBody }}</p>
-  </div>
+	<div>
+		<h1>🦍 {{ postTitle }}</h1>
+		<p>{{ postBody }}</p>
+	</div>
 </template>
 <script>
 export default {
-  name: "BlogPost",
-  // Camel case in JavaScript
-  props: ["postTitle", "postBody"]
+	name: 'BlogPost',
+	// Camel case in JavaScript
+	props: ['postTitle', 'postBody']
 };
 </script>
 ```
@@ -74,7 +74,7 @@ Again, if you’re using string templates, this limitation does not apply.
 So far, we’ve only seen props listed as an array of strings:
 
 ```javascript
-props: ["title", "postBody", "author", "createdAt"];
+props: ['title', 'postBody', 'author', 'createdAt'];
 ```
 
 Most of the time you will know beforehand each type of the _props_ passed. In that case, you will have the ability to type every _prop_ using an object, where names and values contain the _prop_ name and _type_ respectively.
