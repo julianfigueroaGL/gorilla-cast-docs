@@ -1,0 +1,38 @@
+### Introduction
+
+Now we have all the basic concepts of vuejs, its components & lifecycles and how to communicate between them. So far so good, but most of modern UI applications are not simply static sites right?. How about navigating between pages and dynamically load different components based on that navigation? Vuejs provides a powerfull plugin library for those use cases where your application will dynamically load different components based on some kind of routing. That's all we know as Single Page Applications.
+
+## Installation
+
+Vuejs recommends for most Single Page Applications the officially supported [vue-router library.](https://github.com/vuejs/vue-router)
+
+### Using CDN
+
+You could use simple script tags in order to load `vue-router` from a CDN link.
+Include vue-router after Vue and it will install itself automatically:
+
+```HTML
+<script src="/path/to/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+```
+
+### Using Npm / Yarn
+
+```sh
+npm install vue-router --save
+
+//or
+
+yarn add vue-router
+```
+
+When used with a module system, you must explicitly install the router via Vue.use():
+
+```javascript
+import Vue from "vue";
+import VueRouter from "vue-router";
+
+Vue.use(VueRouter);
+```
+
+You don't need to do this when using global script tags.

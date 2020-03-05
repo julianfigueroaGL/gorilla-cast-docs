@@ -35,6 +35,38 @@ module.exports = {
 					['/lifecycle/hooks/hooks', 'Lifecycle Hooks'],
 				],
 			},
+			{
+				title: 'Communication',
+				collapsable: false,
+				children: [
+					['/communication/props/props', 'Props'],
+					['/communication/event-emitter/emitter', 'Event Emitter Pattern'],
+					['/communication/communication-task/task', 'Project Tasks'],
+					['/communication/resolution/resolution', 'Resolution'],
+				]
+			},
+			{
+				title: 'Routing',
+				collapsable: false,
+				children: [
+					['/routing/', 'Introduction'],
+					['/routing/basic-routing/basic', 'Basic Routing'],
+					['/routing/dynamic-routing/dynamic', 'Dynamic Routing'],
+					['/routing/lazy-loading/lazy-loading', 'Lazy Loading'],
+					['/routing/routing-task/task', 'Project Tasks'],
+					['/routing/resolution/resolution', 'Resolution'],
+				]
+			},
+			{
+				title: 'Vuex',
+				collapsable: false,
+				children: [
+					['/stores/', 'Flux Pattern'],
+					['/stores/vuex/vuex', 'Vuex'],
+					['/stores/vuex-task/task', 'Project Tasks'],
+					['/stores/resolution/resolution', 'Resolution'],
+				]
+			},
 			['/testing/', 'Testing'],
 			['/build/', 'Build'],
 			{
