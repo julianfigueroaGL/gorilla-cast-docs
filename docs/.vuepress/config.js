@@ -85,6 +85,18 @@ module.exports = {
 					['/best-practices/routing/routing', 'Routing'],
 					['/best-practices/vuex/vuex', 'Vuex']
 				]
+			},
+			{
+				title: 'Advanced Features',
+				collapsable: false,
+				children: [
+					['/advanced/', 'Advanced Features'],
+					['/advanced/vue3/vue3', 'Vue 3'],
+					['/advanced/configurations/configurations', 'Configurations'],
+					['/advanced/plugins/plugins', 'Plugins'],
+					['/advanced/mixins/mixins', 'Mixins'],
+					['/advanced/animations/animations', 'Animations']
+				]
 			}
 		]
 	},
