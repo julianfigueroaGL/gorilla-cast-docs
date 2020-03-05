@@ -1,4 +1,5 @@
 ### Communication
+
 We're all set, now we know how to create our custom components and this will help us with code reuse and composition. One thing that is missing is how we can communicate between components. Vuejs provide us two simple but really powerful ways to pass data between our components and this will be pretty familiar if you are used to use HTML attributes.
 
 ### Props
@@ -18,7 +19,7 @@ That means that the **`<input />`** element behaves differently based on the att
 Same goes with our custom components, let's say we have our `<BlogHeaderComponent />` and we wanted to display a dynamic title based on the `title` property passed to our component.
 
 ```HTML
-<BlogHeaderComponent title="Awesome Vuejs Gorilla Bootcamp" />
+<BlogHeader title="Awesome Vuejs Gorilla Bootcamp" />
 ```
 
 This will render the following:
@@ -26,11 +27,17 @@ This will render the following:
 
 So our component definition will look like this:
 
-```javascript
-Vue.component("BlogHeaderComponent", {
-  props: ["title"],
-  template: "<h1>🦍 {{ title }}</h1>"
-});
+```vue
+<template>
+  <h1>🦍 {{ title }}</h1>
+</template>
+
+<script>
+export default {
+  name:: "BlogHeader"
+  props: ["title"]
+};
+</script>
 ```
 
 This way our custom component will be accepting a custom `props: ['title']` and the template will be dynamically updated based on the value passed to that _props_ component property.
@@ -38,15 +45,20 @@ This way our custom component will be accepting a custom `props: ['title']` and 
 ::: tip
 HTML attribute names are case-insensitive, so browsers will interpret any uppercase characters as lowercase. That means when you’re using in-DOM templates, camelCased prop names need to use their kebab-cased (hyphen-delimited) equivalents:
 
-```javascript
-Vue.component("BlogPost", {
-  // Camel case in JavaScript
-  props: ["postTitle", "postBody"],
-  template: `
+```vue
+<template>
+  <div>
     <h1>🦍 {{ postTitle }}</h1>
     <p>{{ postBody }}</p>
-  `
-});
+  </div>
+</template>
+<script>
+export default {
+  name: "BlogPost",
+  // Camel case in JavaScript
+  props: ["postTitle", "postBody"]
+};
+</script>
 ```
 
 ```HTML
@@ -157,3 +169,8 @@ All props form a **one-way-down** binding between the child property and the par
 
 In addition, every time the parent component is updated, all props in the child component will be refreshed with the latest value. This means **you should not attempt to mutate a prop inside a child component**. If you do, Vue will warn you in the console.
 :::
+
+## Additional Links
+
+- Vuejs official docs - [Props](https://vuejs.org/v2/guide/components-props.html)
+- Passing data to child components with [Props](https://vuejs.org/v2/guide/components.html#Passing-Data-to-Child-Components-with-Props)
