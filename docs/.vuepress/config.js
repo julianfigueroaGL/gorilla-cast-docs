@@ -10,14 +10,14 @@ module.exports = {
 		logo: '/image.png',
 		nav: [
 			{ text: 'Home', link: '/' },
-			{ text: 'Introduction', link: '/intro/' }
+			{ text: 'Get Started', link: '/intro/' }
 		],
 		version: '0.11.0-beta',
 		sidebar: [
 			'/',
 			['/basics/', 'Basics'],
 			{
-				title: 'Geeting Stared', 
+				title: 'Get Started', 
 				collapsable: false,
 				sidebarDepth: 2,
 				children: [
@@ -33,37 +33,43 @@ module.exports = {
 					['/lifecycle/application/application', 'Application Setup'],
 					['/lifecycle/components/components', 'Components'],
 					['/lifecycle/hooks/hooks', 'Lifecycle Hooks'],
+					['/lifecycle/lifecycle-task/lifecycle-task', 'Project Task'],
+					['/lifecycle/resolution/resolution', 'Resolution'],
 				],
 			},
 			{
 				title: 'Communication',
 				collapsable: false,
+				sidebarDepth: 2,
 				children: [
+					['/communication/', 'Introduction'],
 					['/communication/props/props', 'Props'],
-					['/communication/event-emitter/emitter', 'Event Emitter Pattern'],
-					['/communication/communication-task/task', 'Project Tasks'],
+					['/communication/event-emitter/event-emitter', 'Event Emitter Pattern'],
+					['/communication/communication-task/communication-task', 'Project Tasks'],
 					['/communication/resolution/resolution', 'Resolution'],
 				]
 			},
 			{
 				title: 'Routing',
 				collapsable: false,
+				sidebarDepth: 2,
 				children: [
 					['/routing/', 'Introduction'],
-					['/routing/basic-routing/basic', 'Basic Routing'],
-					['/routing/dynamic-routing/dynamic', 'Dynamic Routing'],
+					['/routing/basic-routing/basic-routing', 'Basic Routing'],
+					['/routing/dynamic-routing/dynamic-routing', 'Dynamic Routing'],
 					['/routing/lazy-loading/lazy-loading', 'Lazy Loading'],
-					['/routing/routing-task/task', 'Project Tasks'],
+					['/routing/routing-task/routing-task', 'Project Tasks'],
 					['/routing/resolution/resolution', 'Resolution'],
 				]
 			},
 			{
 				title: 'Vuex',
 				collapsable: false,
+				sidebarDepth: 2,
 				children: [
 					['/stores/', 'Flux Pattern'],
 					['/stores/vuex/vuex', 'Vuex'],
-					['/stores/vuex-task/task', 'Project Tasks'],
+					['/stores/vuex-task/vuex-task', 'Project Tasks'],
 					['/stores/resolution/resolution', 'Resolution'],
 				]
 			},

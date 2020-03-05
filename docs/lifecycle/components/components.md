@@ -248,11 +248,3 @@ As described on the initial section, this Bootcamp is intended to be an experien
 2. Add a folder called API and use the include the utilies listed here as your main "fake" data provider.
 3. Create configuration files.
 4. Configure main base router.
-
-## Resolution
-
-Our first steps where focused on defining our app skeleton with the required configurations, tools and resources.
-
-Let's take a look to the proposed solution:
-
-{{ Link }}

@@ -1,4 +1,4 @@
-### Dynamic Routing
+# Dynamic Routing
 
 Very often we will need to map routes with the given pattern to the same component. For example we may have a `User` component which should be rendered for all users but with different user IDs. In `vue-router` we can use a dynamic segment in the path to achieve that:
 

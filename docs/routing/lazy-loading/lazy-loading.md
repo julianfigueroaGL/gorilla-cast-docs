@@ -1,4 +1,4 @@
-### Lazy Loading Routing
+# Lazy Loading Routing
 
 As your SPA grows in complexity, so does the size of the application bundle. After a point, it becomes a significant hindrance to the load times of your page. Thankfully, `vue-router` supports `webpack’s` built in [dynamic imports](https://webpack.js.org/guides/code-splitting/#dynamic-imports). This way we can define our routing and use a lazy load approach for loading lesser-used routes into bundles that are loaded on-demand when the route is accessed.
 
