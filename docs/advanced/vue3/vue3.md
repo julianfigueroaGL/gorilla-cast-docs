@@ -1,15 +1,15 @@
 # Vue 3
 
-This will be the next version of Vue JS, it was announced back in Fall of 2018 by Evan You
+This will be the next version of Vue JS, it was announced back in Fall of 2018 by Evan You - vuejs creator.
 
 ## Release Date
 
 There's no official release date, but is expected to be in Q1 of 2020
-[Plugin for Vue 3](https://github.com/vuejs/vue-cli-plugin-vue-next?ref=madewithvuejs.com)
+[Plugin for Vue 3](https://github.com/vuejs/vue-cli-plugin-vue-next?ref=madewithvuejs.com).
 
 ## Features
 
-Vue 3 will be faster, lighter and more maintainable accoridng to Evan You
+Vue 3 will be faster, lighter and more maintainable according to Evan You.
 
 ### Composition API
 
@@ -19,16 +19,16 @@ Now you can encasulate kogic into `composition functions` and reuse that logic a
 ### API Reference
 
 The API has been renamed from **Functions API** to **Composition API** along the way. Read the
-[API Reference](https://vue-composition-api-rfc.netlify.com/api.html#setup?ref=madewithvuejs.com)
+[API Reference](https://vue-composition-api-rfc.netlify.com/api.html#setup?ref=madewithvuejs.com).
 
 ### Other exciting changes in Vue 3:
 
-- Virtual DOM rewrite for better performance and improved TypeScript support
-- Exposed Reactivity API
-- Time Slicing Support
-- Static Tree Hoisting
-- Optimized Slots Generations
-- Monomorphic Calls
+- Virtual DOM rewrite for better performance and improved TypeScript support.
+- Exposed Reactivity API.
+- Time Slicing Support.
+- Static Tree Hoisting.
+- Optimized Slots Generations.
+- Monomorphic Calls.
 
 ## Additional Links
 

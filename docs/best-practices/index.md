@@ -9,7 +9,7 @@
 
 ### Performance
 
-You have to set
+You have to set:
 
 ```js
 Vue.config.performance = true;
@@ -29,23 +29,23 @@ Vue.config.errorHandler;
 
 Use:
 
-- errorCaptured hook
+- errorCaptured hook.
 
 Set:
 
-- Runtime error ttracking using services like [Sentry](https://sentry.io/welcome/) and [Bugsnag](https://www.bugsnag.com/)
+- Runtime error tracking using services like [Sentry](https://sentry.io/welcome/) and [Bugsnag](https://www.bugsnag.com/).
 
 ### Computed Properties
 
 Split complex computed properties into as many simpler properties:
 
-- Easier to test
-- Easier to read
-- More manageable
+- Easier to test.
+- Easier to read.
+- More manageable.
 
 ### Component Data
 
-- Define data props upfront to make them reactive
+- Define data props upfront to make them reactive.
 
 ```js
 data() {
@@ -64,32 +64,33 @@ data() {
 
 ```
 
-- Avoid touching the DOM directly
+- Avoid manipulating the DOM directly.
 
-- No need to put static data in Vue **data** object
+- No need to put static data in Vue **data** object.
 
 ::: danger Bad
 
 ```js
-	import landingImage from '../images/landing';
-	data() {
-	return {
-		landingImage: '...'
-
-	}
-}
+import landingImage from "../images/landing";
+export default {
+  data() {
+    return {
+      landingImage: "..."
+    };
+  }
+};
 ```
 
 :::
 ::: tip Good
 
 ```js
-	import landingImage from '../images/landing';
+import landingImage from '../images/landing';
+
+export default {
 	created() {
-
 		this.landingImage: '...'
-
-
+	};
 }
 ```
 
@@ -99,5 +100,5 @@ data() {
 
 | Directive |        Description         |
 | --------- | :------------------------: |
-| v-if      |     Higher toggle cost     |
-| v-show    | Higher initial render cost |
+| `v-if`    |     Higher toggle cost     |
+| `v-show`  | Higher initial render cost |

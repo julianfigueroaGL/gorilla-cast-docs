@@ -1,17 +1,17 @@
 # Application Setup
 
-When it comes to setting up your Vue applications, there are quite a few things you need to take into considerations in order to fir good practices and also to include as much as you need to run your tasks.
+When it comes to setting up your Vue applications, there are quite a few things you need to take into considerations in order to fit good practices and also to include as much as you need to run your tasks.
 
-However, here are the most common and recommended things you need to keep track:
+However, here are the most common and recommended things you need to keep track of:
 
 - Define a clear, consistent and meaningful folder structure
 - Install all the dependencies you need but avoid using unnecesary libraries.
-- Use a transpiler, so that you can ensure a high level of compatibility for your application.
-- Implement linting, so that you can keep your code structure organized and standardized.
-- Configure a router, to easily manage your application flow and transitions between sections.
-- Include a unit testing tool, to ensure the quaility of your application and avoid side effects.
+- Use a transpiler: so that you can ensure a high level of compatibility for your application.
+- Use a Linter: so that you can keep your code structure organized and standardized.
+- Configure a router: to easily manage your application flow and transitions between sections.
+- Include a unit testing tool: to ensure the quaility of your application and avoid side effects.
 
-Below, you will find out a set of Vue tools that will leverage your setup process and give you a better idea on how to setup your appliaction.
+Below, you will find out a set of Vue tools that will leverage your setup process and give you a better idea on how to setup your application.
 
 ## Plugins Usage
 
@@ -19,7 +19,7 @@ Below, you will find out a set of Vue tools that will leverage your setup proces
 
 As in many other frameworks and even in general in programming languages, plugins are pre-built libraries that add extra functionality to our application. In Vue, there's no difference, plugins add extra funcionality to our Vue.js appliction in a global scope.
 
-As per the official documentation, we could split plugins basned on the following main purposes:
+As per the official documentation, we could split plugins based on the following main purposes:
 
 - To add global methods or properties.
 - To add global assets.
@@ -33,7 +33,7 @@ However, there are plugins that could include all of the purposes mentioned abov
 In order to implement a plugin in your Vue application, you should:
 
 - Install the desired plugin if required, for example using npm or yarn.
-- Include the plugin in your Vue instance, taking advantage of the `Vue.use` command as shown below
+- Include the plugin in your Vue instance, taking advantage of the `Vue.use` command as shown below.
 
 ```javascript
 // Create Vue Instance
@@ -54,7 +54,7 @@ This documentation is referencing the updated @vue/cli.
 
 ### Insallation
 
-The installatin procces is very straightforward whether using yarn or npm:
+The installation process is very straightforward whether using yarn or npm:
 
 ```bash
 npm install -g @vue/cli
@@ -82,7 +82,7 @@ vue create my-app
 
 This will start the process of creating a new fresh Vue.js application under the `my-app`, and eventually ask for the proper questions to configure your project with the desired options.
 
-Vue CLI create command offers you two ways of configuring, the first is selecting a pre-configured package with ESLint or Babel. The second one is manually selecting the multiple available options based on your needs, this includes:
+`vue create` CLI command offers you two ways of configuring, the first is selecting a pre-configured package with ESLint or Babel. The second one is manually selecting the multiple available options based on your needs, this includes:
 
 - Babel
 - TypeScript
@@ -96,7 +96,7 @@ Vue CLI create command offers you two ways of configuring, the first is selectin
 
 #### Adding Plugins and Presets
 
-With the `vue add`command you can easily add new features through plugins to your existing app. For instance, here is an example of adding Vuetify plugin to our project:
+With the `vue add` command you can easily add new features through plugins to your existing app. For instance, here is an example of adding Vuetify plugin to our project:
 
 ```bash
 vue add vuetify
@@ -145,12 +145,12 @@ However, Vue CLI offers a really good skeleton of folder structure, and it's the
 
 This structure can be different depending on the set of options you choose, let's deep dive into the main folders and files:
 
-- **babel.conifg.js:** transpiler configurations
-- **jsconfig.json:** compiler configurations
-- **package.json / package-lock.json:** project configurations
-- **public:** public files storage
-- **src:** main source code folder
-- **src/app:** app main Vue component
+- **babel.config.js:** transpiler configurations.
+- **jsconfig.json:** compiler configurations.
+- **package.json / package-lock.json:** project configurations.
+- **public:** public files storage.
+- **src:** main source code folder.
+- **src/app:** app main Vue component.
 - **src/assets:** folder to include local non public assets.
 - **src/components:** main components allocation folder.
 - **src/main.js:** application entry point, this is where typically the main instance of Vue is defined.
@@ -166,6 +166,6 @@ All the Vue components in this structure have been transformed from Single File 
 
 ## Additional Links
 
-- [Plugins in Depth](https://vuejs.org/v2/guide/plugins.html#ad) Learn more about plugins and how to create your owns
-- [Splitting Components](https://nullcast.io/split-vue-js-components-into-multiple-files/) Split components into multiple files
-- [Vue CLI](https://cli.vuejs.org/guide/) Read more about this useul tool
+- [Plugins in Depth](https://vuejs.org/v2/guide/plugins.html#ad) Learn more about plugins and how to create your owns.
+- [Splitting Components](https://nullcast.io/split-vue-js-components-into-multiple-files/) Split components into multiple files.
+- [Vue CLI](https://cli.vuejs.org/guide/) Read more about this useul tool.

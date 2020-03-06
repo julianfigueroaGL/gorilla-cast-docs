@@ -4,7 +4,7 @@ Progressive web app is a web that a native app can do, it can work offline and y
 
 ## Features
 
-PWAs can run on any device, they should be responsive and have an icon for a different device resolution
+PWAs can run on any device, they should be responsive and have an icon for a different device resolution.
 
 To build a PWA, it's needed to register [service workers](https://developers.google.com/web/fundamentals/primers/service-workers) for handling the installation process and adding the offline features to make a normal web app a PWA.
 

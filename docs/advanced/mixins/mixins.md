@@ -11,20 +11,20 @@ When a comoponent uses a mixin, all options in the mixin will be `mixed` into th
 
 ```js
 export const exampleMixin = {
-	created() {
-		console.log('👋 from Mixin');
-	}
+  created() {
+    console.log("👋 from Mixin");
+  }
 };
 ```
 
-After creating our first mixin, we can use it in a compomponent in order to extend the funcionality
+After creating our first mixin, we can use it in a compomponent in order to extend the funcionality.
 
 ```html
 <script>
-	import { exampleMixin } from '../mixins/exampleMixin.js';
-	export default {
-		mixins: [exampleMixin]
-	};
+  import { exampleMixin } from "../mixins/exampleMixin.js";
+  export default {
+    mixins: [exampleMixin]
+  };
 </script>
 ```
 

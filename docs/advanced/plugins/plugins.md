@@ -1,26 +1,26 @@
 # Plugins
 
 Vue JS plugins are a powerful and simple way to add global features to you application.
-Vue plugin is very simple indeed, it's justa n object wit an `install` method that takes a couple of parameters:
+Vue plugins are very simple indeed, it's just an object with an `install` method that takes a couple of parameters:
 
-- The global `Vue` object
-- An object containing user-defined options
+- The global `Vue` object.
+- An object containing user-defined options.
 
 ## Features
 
 ### Your first Plugin
 
-This will be a Plugin that console every time a component is created to the DOM
+This will be a Plugin that console every time a component is created to the DOM.
 
 ```js
 const FirstPlugin = {
-	install(Vue, options) {
-		vue.mixin({
-			created() {
-				console.log('Created');
-			}
-		});
-	}
+  install(Vue, options) {
+    vue.mixin({
+      created() {
+        console.log("Created");
+      }
+    });
+  }
 };
 export default FirstPlugin;
 ```
@@ -28,15 +28,15 @@ export default FirstPlugin;
 Now can be used in the Vue app by importing it like this:
 
 ```js
-import Vue from 'vue';
-import FirstPlugin from './first-plugin.js';
-import App from './App.vue';
+import Vue from "vue";
+import FirstPlugin from "./first-plugin.js";
+import App from "./App.vue";
 
 Vue.use(FirstPlugin);
 
 new Vue({
-	el: '#app',
-	render: h => h(App)
+  el: "#app",
+  render: h => h(App)
 });
 ```
 
@@ -58,9 +58,9 @@ const FirstPlugin {
 export default FirstPlugin;
 ```
 
-### Modifying the GLobal Vue Object
+### Modifying the Global Vue Object
 
-From a plugin you can modify the global Vue pretty straight forward
+From a plugin you can modify the global Vue pretty straightforward.
 
 ```js
 const FirstPlugin {
@@ -77,7 +77,7 @@ export default FirstPlugin;
 
 ### Modyfing Vue Instances
 
-You can modify the Vue prototype in case you want to add a property or method to component instances with no need of injection mechanism
+You can modify the Vue prototype in case you want to add a property or method to component instances with no need of injection mechanism.
 
 ```js
 const FirstPlugin {
@@ -95,7 +95,7 @@ export default FirstPlugin;
 ### Distributing your Plugin
 
 When your plugin is ready, it can be distributed to the community via [NPM](https://www.npmjs.com/) or [Github](https://github.com/).
-Also you can open a pull request to the official [Vue repository](https://github.com/vuejs/awesome-vue)
+Also you can open a pull request to the official [Vue repository](https://github.com/vuejs/awesome-vue).
 
 ## Additional Links
 

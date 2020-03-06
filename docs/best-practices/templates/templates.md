@@ -26,10 +26,10 @@ props: { titleText: String }
 
 ## Simply expression in templates
 
-Component templates should have only simple expressions, if not this code should be in a computed properties or methods
+Component templates should have only simple expressions, if not this code should be in a computed properties or methods:
 ::: danger Bad
 
-```html
+```jsx
 {{ fullName.split(' ').map(function (word) { return word[0].toUpperCase() + word.slice(1) }).join(' ') }}
 ```
 
@@ -37,9 +37,9 @@ Component templates should have only simple expressions, if not this code should
 
 ::: tip Good
 
-```html
+```jsx
 <!-- In a template -->
-{{ normalizedFullName }}
+<div> {{ normalizedFullName }} </div>
 ```
 
 ```js

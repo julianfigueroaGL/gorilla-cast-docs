@@ -13,7 +13,7 @@ Software companies have to provide an excellent and performance product without 
 
 ## Test runner
 
-You can use [Jest](https://jestjs.io/), [Mocha](https://mochajs.org/), [Cypress](https://www.cypress.io/) to do Unit, Integration or End to End testing
+You can use [Jest](https://jestjs.io/), [Mocha](https://mochajs.org/), [Cypress](https://www.cypress.io/) to do Unit, Integration or End to End testing.
 
 ### Jest
 
