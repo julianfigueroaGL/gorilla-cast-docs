@@ -71,35 +71,64 @@ data() {
 ::: danger Bad
 
 ```js
-import landingImage from '../images/landing.png';
+<template>
+	<div id="app">
+		<img alt="Vue logo" :src="logo" />
+		<HelloWorld msg="Welcome to Your Vue.js App" />
+	</div>
+</template>
+
+<script>
+import HelloWorld from './components/HelloWorld.vue';
+import image from './assets/logo.png';
 
 export default {
+	name: 'App',
+	components: {
+		HelloWorld
+	},
 	data() {
 		return {
-			newImage: landingImage
+			logo: image
 		};
 	}
 };
+</script>
 ```
 
 :::
+
+There's no need to define a property in Data to directly modify the DOM
+
 ::: tip Good
 
 ```js
-import landingImage from "../images/landing.png";
-export default {
-	data() {
-		return {
-			newImage: ""
+<template>
+	<div id="app">
+		<img alt="Vue logo" :src="logo" />
+		<HelloWorld msg="Welcome to Your Vue.js App" />
+	</div>
+</template>
 
-		},
-	created() {
-		this.newImage: landingImage
+<script>
+import HelloWorld from './components/HelloWorld.vue';
+import image from './assets/logo.png';
+
+export default {
+	name: 'App',
+	components: {
+		HelloWorld
+	},
+	computed: {
+		logo() {
+			return image;
+		}
 	}
 };
+</script>
 ```
 
-Instead of declaring static data inside the Data function, just declare the prop and inside a lifecycle hook set the value for that prop
+Instead of declaring static data inside the Data property, just declare a computed property to manipulate the DOM
 :::
 
 ### Conditional Rendering

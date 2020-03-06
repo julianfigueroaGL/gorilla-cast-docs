@@ -18,7 +18,7 @@ Welcome to our own Gorilla Logic Vue.js Bootcamp. As many of you, the team who c
 
 Thousands of gigabytes of information are not enough to define the amount of information we can find on the internet, but many of these places (not even the offical documentation) tells you the right or recommended path to learn Vue.js.
 
-Bootcamp's main target is to provide you with a proper path to learn this framework, but also, with a methdology that allows you to feel confortable with the framework after passing through all the different challenges you will find right away.
+Bootcamp's main target is to provide you with a proper path to learn Vue.js, but also, with a methdology that allows you to feel confortable with the framework after passing through all the different challenges you will find right away.
 
 ## Methodology
 

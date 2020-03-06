@@ -11,7 +11,7 @@ However, here are the most common and recommended things you need to keep track 
 - Configure a router: to easily manage your application flow and transitions between sections.
 - Include a unit testing tool: to ensure the quaility of your application and avoid side effects.
 
-Below, you will find out a set of Vue.js tools that will leverage your setup process and give you a better idea on how to setup your appliaction.
+Below, you will find out a set of Vue.js tools that will leverage your setup process and give you a better idea on how to setup your application.
 
 ## Plugins Usage
 

@@ -2,7 +2,7 @@
 
 On the Internet, we could find a lot of good and extensive definitions about what a component is and how it relates to Vue.js, but here’s a simple and useful definition for you: components are reusable blocks that we create to build our UIs in a more flexible, scalable and performant way.
 
-Vue.js offers two main ways to express components. First, we have direclty made components, which are built using a direct Vue.js instance as shown below:
+Vue.js offers two main ways to express components. First, we have directly made components, which are built using a direct Vue.js instance as shown below:
 
 ```javascript
 Vue.component('button-incrementer', {

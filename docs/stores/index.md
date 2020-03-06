@@ -1,6 +1,6 @@
 ### Flux Pattern
 
-Flux is an architectural application pattern introduced by Facebook for building scalable client-side applications. The simplicity of this pattern relies in it's **_unidirectional data flow_** making states updates more predictable and easy to track.
+Flux is an architectural application pattern introduced by Facebook for building scalable client-side applications. The simplicity of this pattern relies in its **_unidirectional data flow_** making states updates more predictable and easy to track.
 
 ## Flux Basics
 

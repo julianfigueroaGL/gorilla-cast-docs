@@ -1,14 +1,40 @@
 # Best practices for Routing
 
-## Routing Mode
+## Use same component in multiple routes
 
-First, you should determine if you are going with [HTML 5 history mode or hash mode](https://router.vuejs.org/guide/essentials/history-mode.html) It is 2020, and we definitely recommend that you use HTML5 history mode.
+Sometimes you as a developer are in a situation where yoo have to use the same component for multiple routes. To solve this issue, Vue.js reuses existing components instead of creating once again.
 
-If you use history mode, then it means your client-side router will need to work in sync with your server-side router.
+::: danger Bad
+
+```js
+// router.js
+const routes = [
+	{
+		path: '/path1',
+		component: NewComponent
+	},
+	{
+		path: '/path2',
+		component: NewComponent
+	}
+];
+```
+
+You need to add a `:key` property into the `<router-view>` element. Doing this way the router recognize when the page is different.
+
+:::
+::: tip Good
+
+```js
+// App.vue
+<router-view :key='$route.path' />
+```
+
+:::
 
 ## Micro-frontends
 
-[Micro-frontends](https://micro-frontends.org/) is the term you are looking for. Basically, it is your first line of segregation. You should split your app into multiple smaller apps. Each app will have it's root component, router, models, services, etc. You will share many of the components (Of course, a very large application is important).
+[Micro-frontends](https://micro-frontends.org/) is the term you are looking for. Basically, it is your first line of segregation. You should split your app into multiple smaller apps. Each app will have its root component, router, models, services, etc. You will share many of the components (Of course, a very large application is important).
 
 ## Mono-repo considerations
 

@@ -4,7 +4,7 @@ In the process of web developement you want create manageable and maintainable c
 
 ## Why is important the communication between components
 
-Creating a Vue.js app you need to make the components as isolated as they can be, this will make them in reusable and decoupled/loosely coupled shape.
+In Vue.js by default the components are isolated. This means that you can't reference parent data directly form child component's template. In order to pass data to child components with isolated scope is using `props`
 
 ## Main types of communication between components
 

@@ -44,7 +44,10 @@ Mixins will always be executed before the components.
 </script>
 ```
 
-The output from that is we're showing first the Mixin console and then the one from the component
+As result we get:
+
+1. The mixing was console first
+2. The component console came after
 
 ```{8}
 👋 from Mixin
