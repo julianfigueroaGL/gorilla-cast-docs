@@ -1,5 +1,18 @@
 # Application Setup
 
+When it comes to setting up your Vue applications, there are quite a few things you need to take into considerations in order to fir good practices and also to include as much as you need to run your tasks.
+
+However, here are the most common and recommended things you need to keep track:
+
+- Define a clear, consistent and meaningful folder structure
+- Install all the dependencies you need but avoid using unnecesary libraries.
+- Use a transpiler, so that you can ensure a high level of compatibility for your application.
+- Implement linting, so that you can keep your code structure organized and standardized.
+- Configure a router, to easily manage your application flow and transitions between sections.
+- Include a unit testing tool, to ensure the quaility of your application and avoid side effects.
+
+Below, you will find out a set of Vue tools that will leverage your setup process and give you a better idea on how to setup your appliaction.
+
 ## Plugins Usage
 
 ### Definition
@@ -20,15 +33,86 @@ However, there are plugins that could include all of the purposes mentioned abov
 In order to implement a plugin in your Vue application, you should:
 
 - Install the desired plugin if required, for example using npm or yarn.
-- Include the plugin in your Vue instance, taking advantage of the ``` Vue.use ``` command as shown below
+- Include the plugin in your Vue instance, taking advantage of the `Vue.use` command as shown below
 
 ```javascript
 // Create Vue Instance
-var Vue = require('vue')
+var Vue = require("vue");
 // Create Plugin Instance
-var VueRouter = require('vue-router')
+var VueRouter = require("vue-router");
 // Use/Implement plugin
-Vue.use(VueRouter)
+Vue.use(VueRouter);
+```
+
+## Vue-CLI
+
+As its name describes, Vue command line interface is a powerful tool that allow us to improve our development process with multiple features.
+
+::: warning NOTE
+This documentation is referencing the updated @vue/cli.
+:::
+
+### Insallation
+
+The installatin procces is very straightforward whether using yarn or npm:
+
+```bash
+npm install -g @vue/cli
+# OR
+yarn global add @vue/cli
+```
+
+After installing it, you have the `vue` command globally available. If you want to check it you just need to type in your terminal the following command:
+
+```bash
+vue --version
+```
+
+### Main Features
+
+Even though Vue CLI offers multiple features, here are the most relevant ones and its main funtionality:
+
+#### Creating Projects
+
+Vue CLI allow us to create a new Vue.js project using a guided setup. In order to start using the command you need to type the following command:
+
+```bash
+vue create my-app
+```
+
+This will start the process of creating a new fresh Vue.js application under the `my-app`, and eventually ask for the proper questions to configure your project with the desired options.
+
+Vue CLI create command offers you two ways of configuring, the first is selecting a pre-configured package with ESLint or Babel. The second one is manually selecting the multiple available options based on your needs, this includes:
+
+- Babel
+- TypeScript
+- PWA Support
+- Router
+- Vuex
+- CSS Pre-processors
+- Linter/Formatters
+- Unit Testing
+- E2E Testing
+
+#### Adding Plugins and Presets
+
+With the `vue add`command you can easily add new features through plugins to your existing app. For instance, here is an example of adding Vuetify plugin to our project:
+
+```bash
+vue add vuetify
+```
+
+#### Vue CLI Service
+
+This is probably one of the most useful tools when it comes to Vue CLI, It includes a set of multiple options that allow us to run basic and relevant tasks during our development process such as serve or build our project. Usually, the presets when creating new projects include npm scripts using this service tool.
+
+```json
+{
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  }
+}
 ```
 
 ## Suggested Folder Structure
@@ -41,7 +125,6 @@ However, Vue CLI offers a really good skeleton of folder structure, and it's the
 .
 ├── README.md
 ├── babel.config.js
-├── jest.config.js
 ├── jsconfig.json
 ├── package-lock.json
 ├── package.json
@@ -49,7 +132,6 @@ However, Vue CLI offers a really good skeleton of folder structure, and it's the
 │   ├── favicon.ico
 │   └── index.html
 ├── src
-│   ├── api
 │   ├── app
 │   ├── assets
 │   ├── components
@@ -57,15 +139,33 @@ However, Vue CLI offers a really good skeleton of folder structure, and it's the
 │   ├── plugins
 │   ├── router
 │   ├── store
-│   ├── utils
 │   └── views
-├── tests
-│   └── unit
 └── vue.config.js
 ```
 
-## Vue-CLI
+This structure can be different depending on the set of options you choose, let's deep dive into the main folders and files:
+
+- **babel.conifg.js:** transpiler configurations
+- **jsconfig.json:** compiler configurations
+- **package.json / package-lock.json:** project configurations
+- **public:** public files storage
+- **src:** main source code folder
+- **src/app:** app main Vue component
+- **src/assets:** folder to include local non public assets.
+- **src/components:** main components allocation folder.
+- **src/main.js:** application entry point, this is where typically the main instance of Vue is defined.
+- **src/plugins:** stores all our installed pluings.
+- **src/router:** routing specific configurations.
+- **src/router:** routing specific/centralized configurations.
+- **src/store:** store definition and configuration files. Here we include our getters, actions and mutations.
+- **src/views:** this is where our render pages reside and where typically components are assembled.
+
+::: warning NOTE
+All the Vue components in this structure have been transformed from Single File Components to splitted SFCs.
+:::
 
 ## Additional Links
 
-- [Vuejs.org](https://vuejs.org/v2/guide/plugins.html#ad) Learn more about plugins and how to create your owns
+- [Plugins in Depth](https://vuejs.org/v2/guide/plugins.html#ad) Learn more about plugins and how to create your owns
+- [Splitting Components](https://nullcast.io/split-vue-js-components-into-multiple-files/) Split components into multiple files
+- [Vue CLI](https://cli.vuejs.org/guide/) Read more about this useul tool

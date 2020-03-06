@@ -33,10 +33,10 @@ So our component definition will look like this:
 </template>
 
 <script>
-export default {
-  name:: "BlogHeader"
-  props: ["title"]
-};
+  export default {
+    name:: "BlogHeader"
+    props: ["title"]
+  };
 </script>
 ```
 
@@ -53,11 +53,19 @@ HTML attribute names are case-insensitive, so browsers will interpret any upperc
 	</div>
 </template>
 <script>
+<<<<<<< HEAD
 export default {
 	name: 'BlogPost',
 	// Camel case in JavaScript
 	props: ['postTitle', 'postBody']
 };
+=======
+  export default {
+    name: "BlogPost",
+    // Camel case in JavaScript
+    props: ["postTitle", "postBody"]
+  };
+>>>>>>> Added Application Setup Section
 </script>
 ```
 

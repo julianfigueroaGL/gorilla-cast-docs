@@ -5,11 +5,16 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        margin: 30px;
     }
 </style>
 <div id="container-img">
-    <img src="https://i.imgur.com/oUH9hNy.png" />
+    <img :src="$withBase('/vue.png')" style="width: 150px"/>
+    <img :src="$withBase('/plus.png')" style="width: 50px"/>
+    <img :src="$withBase('/logoBlack.png')" alt="foo" />
 </div>
+
+
 
 Welcome to our own Gorilla Logic Vue Bootcamp. As many of you, the team who created this Bootcamp found interesting learning Vue and/or got involved in this path due to a project need. This is great, but the amount of information and learning paths are not that great.
 
@@ -26,6 +31,10 @@ With the idea of creating a disruptive process, this Bootcamp was designed to wa
 ### Project Scope
 
 The application you are going to build is a Podcast Player, below is a mockup that showcases the scope of it:
+
+<div id="container-img">
+    <img :src="$withBase('/wireframe.png')"/>
+</div>
 
 The main functionalities or requirements for this application are:
 
