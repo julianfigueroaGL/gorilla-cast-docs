@@ -1,6 +1,6 @@
 # Build
 
-This process is intended for Vue JS applications created via [CLI](https://cli.vuejs.org/).
+This process is intended for Vue.js applications created via [CLI](https://cli.vuejs.org/)
 
 ## Complete the follow steps:
 

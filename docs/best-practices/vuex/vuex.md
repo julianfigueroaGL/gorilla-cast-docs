@@ -1,8 +1,8 @@
 # Best practices for Vuex
 
-[Vuex](https://vuex.vuejs.org/) is the state management pattern and library for Vue Js applications.
+[Vuex](https://vuex.vuejs.org/) is the state management pattern and library for Vue.js applications
 
-- Have in mind adding Vuex since the start of you Vue Js application.
+- Have in mind adding Vuex since the start of you Vue.js application
 
 - Definitely it will make your life ease.
 

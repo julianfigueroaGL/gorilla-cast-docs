@@ -17,7 +17,7 @@ Vue.config.performance = true;
 
 Also consider to use:
 
-- [Vue performance DevTool extension for Chrome](https://chrome.google.com/webstore/detail/vue-performance-devtool/koljilikekcjfeecjefimopfffhkjbne?hl=en)
+- [Vue.js performance DevTool extension for Chrome](https://chrome.google.com/webstore/detail/vue-performance-devtool/koljilikekcjfeecjefimopfffhkjbne?hl=en)
 
 ### Error handling
 
@@ -71,13 +71,14 @@ data() {
 ::: danger Bad
 
 ```js
-import landingImage from "../images/landing";
+import landingImage from '../images/landing.png';
+
 export default {
-  data() {
-    return {
-      landingImage: "..."
-    };
-  }
+	data() {
+		return {
+			newImage: landingImage
+		};
+	}
 };
 ```
 
@@ -85,15 +86,20 @@ export default {
 ::: tip Good
 
 ```js
-import landingImage from '../images/landing';
-
+import landingImage from "../images/landing.png";
 export default {
+	data() {
+		return {
+			newImage: ""
+
+		},
 	created() {
-		this.landingImage: '...'
-	};
-}
+		this.newImage: landingImage
+	}
+};
 ```
 
+Instead of declaring static data inside the Data function, just declare the prop and inside a lifecycle hook set the value for that prop
 :::
 
 ### Conditional Rendering

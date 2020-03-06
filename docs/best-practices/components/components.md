@@ -14,26 +14,23 @@ If you want to inform the parent component you have to use events:
 
 ```js
 export default {
-  methods: {
-    onClick() {
-      this.$emit("nameOfEvent", someValue);
-    }
-  }
+	methods: {
+		onClick() {
+			this.$emit('nameOfEvent', someValue);
+		}
+	}
 };
 ```
 
 Parent component:
 
 ```html
-<my-component
-  :firstProp="someValue"
-  @nameOfEvent="”doSomething”"
-></my-component>
+<my-component :firstProp="someValue" @nameOfEvent="”doSomething”"></my-component>
 ```
 
 ## Shortcut component registration
 
-In your Vuejs project you can have multiple components, at some point you will have to import them:
+In your Vue.js project you can have multiple components, at some point you will have to import them:
 
 ::: danger Bad
 
@@ -84,19 +81,19 @@ You can achieve this creating a function that handles this:
 const ctors = {};
 
 const components = {
-  ComponentA,
-  ComponentB,
-  ComponentC
+	ComponentA,
+	ComponentB,
+	ComponentC
 };
 
 //Attach component to vue globally - NOTE: Remember to define a name  in your component...
 Object.keys(components).forEach(function(key) {
-  const component_name = components[key].name;
-  if (component_name) {
-    ctors[component_name] = Vue.component(component_name, components[key]);
-  } else {
-    throw new Error("It seems you forgot go give your component a name...");
-  }
+	const component_name = components[key].name;
+	if (component_name) {
+		ctors[component_name] = Vue.component(component_name, components[key]);
+	} else {
+		throw new Error('It seems you forgot go give your component a name...');
+	}
 });
 ```
 
@@ -105,5 +102,5 @@ Object.keys(components).forEach(function(key) {
 ## Avoid registering all components as global
 
 ::: tip
-You have to set as global components, those ones who can be accessed across the Vue Js application
+You have to set as global components, those ones who can be accessed across the Vue.js application
 :::

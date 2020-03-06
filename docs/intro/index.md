@@ -1,4 +1,4 @@
-# Vue JS Bootcamp
+# Vue.js Bootcamp
 
 <style>
     #container-img{
@@ -14,11 +14,11 @@
     <img :src="$withBase('/logoBlack.png')" alt="foo" />
 </div>
 
-Welcome to our own Gorilla Logic Vue Bootcamp. As many of you, the team who created this Bootcamp found interesting learning Vue and/or got involved in this path due to a project need. This is great, but the amount of information and learning paths are not that great.
+Welcome to our own Gorilla Logic Vue.js Bootcamp. As many of you, the team who created this Bootcamp found interesting learning Vue and/or got involved in this path due to a project need. This is great, but the amount of information and learning paths are not that great.
 
 Thousands of gigabytes of information are not enough to define the amount of information we can find on the internet, but many of these places (not even the offical documentation) tells you the right or recommended path to learn Vue.js.
 
-Bootcamp's main target is not only to provide you with a proper path to learn Vuejs but also with a methdology that allows you to feel confortable while learning about the framework through all the different challenges you will find right away.
+Bootcamp's main target is to provide you with a proper path to learn this framework, but also, with a methdology that allows you to feel confortable with the framework after passing through all the different challenges you will find right away.
 
 ## Methodology
 
@@ -37,8 +37,8 @@ The application you are going to build is a Podcast Player, below is a mockup th
 The main functionalities or requirements for this application are:
 
 - **Track List:** it's required to have a place where users can view all the available tracks that they can reproduce. This list should also include a search box where you can search whether by track name or artist.
-- **Player:** it's required to allow users to reproduce all the available tracks, they can also move to the next or previous track if available.
-- **Global Search:** it's required to have a global search tool that allo users to search across all the available tracks whether favorites or not.
+- **Player:** it's required to allow users to reproduce all the available tracks, they can also go forward and backward 10 seconds if available.
+- **Global Search:** it's required to have a global search tool that allow users to search across all the available tracks whether favorites or not.
 - **Details View:** it's required to have a detailed view for each track. This view is going to include the complete information of the track plus actions to add comments, add/remove to favorites and share.
 - **Favorites List** it's required to allow users to have a place where they can save their favorite tracks. They can add to favorites every track they want, and also they will have a place to see all the tracks already added to this list. This list should also include a search utility where they can filter by track name or artist.
 - **Dashboard:** it's required to have a dashboard or home page that includes a recommended track (randomly selected), a shortcut to favorites and also to the list of all the tracks. This last two lists should limited to 5 elements.
@@ -46,7 +46,7 @@ The main functionalities or requirements for this application are:
 As initial assets, you will get:
 
 1. **Itunes public API** as main data source to query and reproduce tracks. To read more about this resource you can [click here](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/)
-2. **A pre-built API proxy library** that provides you with the main base methods to consume the previous resource. This will allow you to stay focused on learning Vue rather than losing focus with other technologies/approaches. You can check this resource using [this link](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/).
+2. **A pre-built API proxy library** that provides you with the main base methods to consume the previous resource. This will allow you to stay focused on learning Vue.js rather than loosing focus with other technologies/approaches. You can check this resource using [this link](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/).
 
 ### Development Process
 
@@ -86,6 +86,6 @@ It's important to be as prepared as possible before you start taking this Bootca
 
 This Bootcamp would not have been possible without Gorilla's support in general, specially from Arturo Campos, John Howard and Mariana Santamaria, they supported our idea and helped us connecting with the right people and provided us the right resources.
 
-Also, special thanks to the team that was involved on any of the stages of this Bootcamp: Alejandro Benjumea (alejandro.benjumea), Juan Giraldo (juan.giraldo), Julián Figueroa (julian.figueroa), Oscar Granada (oscar.granada) y Oscar Polanco (oscar.polanco).
+Also, special thanks to the team that was involved on any of the stages of this Bootcamp: Alejandro Benjumea (alejandro.benjumea), Jose Penagos (jose.penagos), Juan Giraldo (juan.giraldo), Julián Figueroa (julian.figueroa), Oscar Granada (oscar.granada) y Oscar Polanco (oscar.polanco).
 
 Last but not least, thanks to all the Vue.js team and online trainers that provided us as a team with this valuable knowledge.

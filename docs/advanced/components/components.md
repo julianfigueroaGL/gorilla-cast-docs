@@ -4,13 +4,13 @@ In the process of web developement you want create manageable and maintainable c
 
 ## Why is important the communication between components
 
-Creating a Vuejs app you need to make the components as isolated as they can be, this would make them in reusable and decoupled/loosely coupled shape.
+Creating a Vue.js app you need to make the components as isolated as they can be, this would make them in reusable and decoupled/loosely coupled shape.
 
 ## Main types of communication between components
 
 ### Direct parent-child communication
 
-This is the common model of components communication in Vuejs, it works passing values as `props` form Parent to child.
+This is the common model of components communication in Vue.js, it works passing values as `props` form Parent to child.
 
 <img src="https://cms-assets.tutsplus.com/uploads/users/2028/posts/32354/image/vueccparentchild.png" alt="Parent-child pattern">
 
@@ -35,22 +35,22 @@ Child Component:
 
 ```html
 <template>
-  <div>
-    {{ track }}
-  </div>
+	<div>
+		{{ track }}
+	</div>
 </template>
 <script>
-  export default {
-    props: {
-      track: {
-        default() {
-          return {};
-        },
-        required: true,
-        type: Object
-      }
-    }
-  };
+	export default {
+		props: {
+			track: {
+				default() {
+					return {};
+				},
+				required: true,
+				type: Object
+			}
+		}
+	};
 </script>
 ```
 

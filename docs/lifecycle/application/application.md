@@ -1,6 +1,6 @@
 # Application Setup
 
-When it comes to setting up your Vue applications, there are quite a few things you need to take into considerations in order to fit good practices and also to include as much as you need to run your tasks.
+When it comes to setting up your Vue.js applications, there are quite a few things you need to take into considerations in order to implement good practices and also to include as much as you need to run your tasks.
 
 However, here are the most common and recommended things you need to keep track of:
 
@@ -11,13 +11,13 @@ However, here are the most common and recommended things you need to keep track 
 - Configure a router: to easily manage your application flow and transitions between sections.
 - Include a unit testing tool: to ensure the quaility of your application and avoid side effects.
 
-Below, you will find out a set of Vue tools that will leverage your setup process and give you a better idea on how to setup your application.
+Below, you will find out a set of Vue.js tools that will leverage your setup process and give you a better idea on how to setup your appliaction.
 
 ## Plugins Usage
 
 ### Definition
 
-As in many other frameworks and even in general in programming languages, plugins are pre-built libraries that add extra functionality to our application. In Vue, there's no difference, plugins add extra funcionality to our Vue.js appliction in a global scope.
+As in many other frameworks and even in general in programming languages, plugins are pre-built libraries that add extra functionality to our application. In Vue.js, there's no difference, plugins add extra funcionality to our Vue.js application in a global scope.
 
 As per the official documentation, we could split plugins based on the following main purposes:
 
@@ -30,23 +30,23 @@ However, there are plugins that could include all of the purposes mentioned abov
 
 ### Installing Plugins
 
-In order to implement a plugin in your Vue application, you should:
+In order to implement a plugin in your Vue.js application, you should:
 
 - Install the desired plugin if required, for example using npm or yarn.
-- Include the plugin in your Vue instance, taking advantage of the `Vue.use` command as shown below.
+- Include the plugin in your Vue.js instance, taking advantage of the `Vue.use` command as shown below
 
 ```javascript
 // Create Vue Instance
-var Vue = require("vue");
+var Vue = require('vue');
 // Create Plugin Instance
-var VueRouter = require("vue-router");
+var VueRouter = require('vue-router');
 // Use/Implement plugin
 Vue.use(VueRouter);
 ```
 
 ## Vue-CLI
 
-As its name describes, Vue command line interface is a powerful tool that allow us to improve our development process with multiple features.
+As its name describes, Vue.js command line interface is a powerful tool that allow us to improve our development process with multiple features.
 
 ::: warning NOTE
 This documentation is referencing the updated @vue/cli.
@@ -108,10 +108,10 @@ This is probably one of the most useful tools when it comes to Vue CLI, It inclu
 
 ```json
 {
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
-  }
+	"scripts": {
+		"serve": "vue-cli-service serve",
+		"build": "vue-cli-service build"
+	}
 }
 ```
 

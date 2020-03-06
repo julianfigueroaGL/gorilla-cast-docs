@@ -1,3 +1,7 @@
+### Communication
+
+We're all set, now we know how to create our custom components and this will help us with code reuse and composition. One thing that is missing is how we can communicate between components. Vue.js provide us two simple but really powerful ways to pass data between our components and this will be pretty familiar if you are used to use HTML attributes.
+
 ### Props
 
 One of the adventages of creating custom components is the ability to define their own logic, that's when the so called **_props_** comes to the equation.
@@ -15,7 +19,7 @@ That means that the **`<input />`** element behaves differently based on the att
 Same goes with our custom components, let's say we have our `<BlogHeaderComponent />` and we wanted to display a dynamic title based on the `title` property passed to our component.
 
 ```HTML
-<BlogHeader title="Awesome Vuejs Gorilla Bootcamp" />
+<BlogHeader title="Awesome Vue.js Gorilla Bootcamp" />
 ```
 
 This will render the following:
@@ -29,10 +33,10 @@ So our component definition will look like this:
 </template>
 
 <script>
-  export default {
-    name:: "BlogHeader"
-    props: ["title"]
-  };
+export default {
+  name:: "BlogHeader"
+  props: ["title"]
+};
 </script>
 ```
 
@@ -49,19 +53,11 @@ HTML attribute names are case-insensitive, so browsers will interpret any upperc
 	</div>
 </template>
 <script>
-<<<<<<< HEAD
 export default {
 	name: 'BlogPost',
 	// Camel case in JavaScript
 	props: ['postTitle', 'postBody']
 };
-=======
-  export default {
-    name: "BlogPost",
-    // Camel case in JavaScript
-    props: ["postTitle", "postBody"]
-  };
->>>>>>> Added Application Setup Section
 </script>
 ```
 
@@ -100,7 +96,7 @@ Using this approach not only will better document each property that a component
 So far you've just seen _props_ passed as a static value, like this.
 
 ```HTML
-<BlogHeaderComponent title="Awesome Vuejs Gorilla Bootcamp" />
+<BlogHeaderComponent title="Awesome Vue.js Gorilla Bootcamp" />
 ```
 
 You can also dynamically bind any _prop_ using `v-bind` directive.
@@ -171,10 +167,10 @@ You can also dynamically bind any _prop_ using `v-bind` directive.
 ::: tip One-Way data flow
 All props form a **one-way-down** binding between the child property and the parent one: when the parent property updates, **it will flow down to the child**, but not the other way around. This prevents child components from accidentally mutating the parent’s state, which can make your app’s data flow harder to understand.
 
-In addition, every time the parent component is updated, all props in the child component will be refreshed with the latest value. This means **you should not attempt to mutate a prop inside a child component**. If you do, Vue will warn you in the console.
+In addition, every time the parent component is updated, all props in the child component will be refreshed with the latest value. This means **you should not attempt to mutate a prop inside a child component**. If you do, Vue.js will warn you in the console.
 :::
 
 ## Additional Links
 
-- Vuejs official docs - [Props](https://vuejs.org/v2/guide/components-props.html)
+- Vue.js official docs - [Props](https://vuejs.org/v2/guide/components-props.html)
 - Passing data to child components with [Props](https://vuejs.org/v2/guide/components.html#Passing-Data-to-Child-Components-with-Props)

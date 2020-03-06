@@ -2,7 +2,7 @@
 
 Mixns are chinks of code that can be reused. It's a way to implement the DRY principle. `Don't Repeat Yourself`
 
-Mixins are a flexible way to distribute reusable functionalities for Vue Components. A mixin object can contain any component options.
+Mixins are a flexible way to distribute reusable functionalities for Vue.js Components. A mixin object can contain any component options.
 When a comoponent uses a mixin, all options in the mixin will be `mixed` into the component's own options.
 
 ## Features

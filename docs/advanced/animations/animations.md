@@ -1,6 +1,6 @@
 # Animations
 
-Vue Js has built-in `<transition />` and `<transition-group />` components that provide access to CSS and JavaScript hooks.
+Vue.js has built-in `<transition />` and `<transition-group />` components that provide access to CSS and JavaScript hooks.
 
 ## Transtions vs Animations
 
@@ -13,4 +13,4 @@ In terms of tools, both are useful, you can think of transitions as a saw and an
 ## Additional Links
 
 - [Official documentation](https://vuejs.org/v2/guide/transitions.html)
-- [Vue Mastery - ADvanced Animations with Vue Js](https://www.vuemastery.com/conferences/vueconf-us-2019/advanced-animations-with-vuejs/)
+- [Vue Mastery - Advanced Animations with Vue.js](https://www.vuemastery.com/conferences/vueconf-us-2019/advanced-animations-with-vuejs/)

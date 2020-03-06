@@ -6,7 +6,7 @@ Especially the static typing is a very interesting feature for projects in a pro
 
 ## Getting started
 
-1. Create a new Vue JS app via CLI:
+1. Create a new Vue.js app via CLI:
 
 ```bash
 vue create ts-app
@@ -22,51 +22,51 @@ vue create ts-app
 ### Component with TypeSCript types
 
 ```js
-import Vue, { VNode } from "vue";
+import Vue, { VNode } from 'vue';
 
 export const HelloComponent = Vue.extend({
-  data() {
-    return {
-      message: "Hello"
-    };
-  },
-  methods: {
-    greet(): string {
-      return this.message + " world";
-    }
-  },
-  computed: {
-    greeting(): string {
-      return this.greet() + "!";
-    }
-  },
-  render(createElement): VNode {
-    return createElement("div", this.greeting);
-  }
+	data() {
+		return {
+			message: 'Hello'
+		};
+	},
+	methods: {
+		greet(): string {
+			return this.message + ' world';
+		}
+	},
+	computed: {
+		greeting(): string {
+			return this.greet() + '!';
+		}
+	},
+	render(createElement): VNode {
+		return createElement('div', this.greeting);
+	}
 });
 ```
 
 ### Class Style component syntax
 
 ```js
-import Vue from "vue";
-import Component from "vue-class-component";
+import Vue from 'vue';
+import Component from 'vue-class-component';
 
 @Component({
-  template: "<div></div>"
+	template: '<div></div>'
 })
 export default class HelloComponent extends Vue {
-  message: string = "Hello";
-  greet(): string {
-    return this.message + " world";
-  }
-  get greeting() {
-    return this.greet() + "!";
-  }
+	message: string = 'Hello';
+	greet(): string {
+		return this.message + ' world';
+	}
+	get greeting() {
+		return this.greet() + '!';
+	}
 }
 ```
 
 ## Additional Links
 
-- [Official Vue Js documentation](https://vuejs.org/v2/guide/typescript.html)
+- [Official Vue.js documentation](https://vuejs.org/v2/guide/typescript.html)
 - [TypeScript](https://www.typescriptlang.org/)

@@ -1,6 +1,6 @@
 # Vue 3
 
-This will be the next version of Vue JS, it was announced back in Fall of 2018 by Evan You - vuejs creator.
+This will be the next version of Vue.js, it was announced back in Fall of 2018 by Evan You - Vue.js creator.
 
 ## Release Date
 
