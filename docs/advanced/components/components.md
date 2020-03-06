@@ -4,7 +4,7 @@ In the process of web developement you want create manageable and maintainable c
 
 ## Why is important the communication between components
 
-Creating a Vue.js app you need to make the components as isolated as they can be, this would make them in reusable and decoupled/loosely coupled shape.
+Creating a Vue.js app you need to make the components as isolated as they can be, this will make them in reusable and decoupled/loosely coupled shape.
 
 ## Main types of communication between components
 
@@ -71,6 +71,8 @@ created () {
 ```
 
 ### [Vuex](/stores/vuex/vuex/)
+
+Using Vuex you're implementing the Flux architecture
 
 ### Dependency Injection
 

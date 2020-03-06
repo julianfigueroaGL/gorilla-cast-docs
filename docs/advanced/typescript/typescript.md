@@ -1,6 +1,6 @@
 # TypeScript
 
-TypeScript has numerous features such as static typing and transpiling of the latest ECMAScript features for full compatibility with older browsers. Now Vuejs can make use of TypeScript thanks to the Vue CLI version 3.
+TypeScript has numerous features such as static typing and transpiling of the latest ECMAScript features for full compatibility with older browsers. Now Vue.js can make use of TypeScript thanks to the Vue CLI version 3.
 
 Especially the static typing is a very interesting feature for projects in a professional environment as it helps define more strict interfaces. With the use of types, you inherently provide documentation to other developers on how to use your code as it offers guidance on how to use your functions, components and so on.
 
@@ -19,7 +19,7 @@ vue create ts-app
 - CSS Pre-processors
 - Linter / Formatter
 
-### Component with TypeSCript types
+### Component with TypeScript types
 
 ```js
 import Vue, { VNode } from 'vue';

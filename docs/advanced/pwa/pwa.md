@@ -1,6 +1,6 @@
 # Progressive Web Applications - PWA
 
-Progressive web app is a web that a native app can do, it can work offline and you can istall it from a browser.
+Progressive web app is a web that a native app can do, it can work offline and you can install it from a browser.
 
 ## Features
 
