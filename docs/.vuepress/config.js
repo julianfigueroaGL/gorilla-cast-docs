@@ -15,15 +15,8 @@ module.exports = {
 		version: '0.11.0-beta',
 		sidebar: [
 			'/',
+			['/intro/', 'Introduction'],
 			['/basics/', 'Basics'],
-			{
-				title: 'Get Started', 
-				collapsable: false,
-				sidebarDepth: 2,
-				children: [
-					['/intro/', 'Introduction'],
-				],
-			},
 			{
 				title: 'Lifecycle',
 				collapsable: false,
@@ -34,8 +27,8 @@ module.exports = {
 					['/lifecycle/components/components', 'Components'],
 					['/lifecycle/hooks/hooks', 'Lifecycle Hooks'],
 					['/lifecycle/lifecycle-task/lifecycle-task', 'Project Task'],
-					['/lifecycle/resolution/resolution', 'Resolution'],
-				],
+					['/lifecycle/resolution/resolution', 'Resolution']
+				]
 			},
 			{
 				title: 'Communication',
@@ -46,7 +39,7 @@ module.exports = {
 					['/communication/props/props', 'Props'],
 					['/communication/event-emitter/event-emitter', 'Event Emitter Pattern'],
 					['/communication/communication-task/communication-task', 'Project Tasks'],
-					['/communication/resolution/resolution', 'Resolution'],
+					['/communication/resolution/resolution', 'Resolution']
 				]
 			},
 			{
@@ -59,7 +52,7 @@ module.exports = {
 					['/routing/dynamic-routing/dynamic-routing', 'Dynamic Routing'],
 					['/routing/lazy-loading/lazy-loading', 'Lazy Loading'],
 					['/routing/routing-task/routing-task', 'Project Tasks'],
-					['/routing/resolution/resolution', 'Resolution'],
+					['/routing/resolution/resolution', 'Resolution']
 				]
 			},
 			{
@@ -70,7 +63,7 @@ module.exports = {
 					['/stores/', 'Flux Pattern'],
 					['/stores/vuex/vuex', 'Vuex'],
 					['/stores/vuex-task/vuex-task', 'Project Tasks'],
-					['/stores/resolution/resolution', 'Resolution'],
+					['/stores/resolution/resolution', 'Resolution']
 				]
 			},
 			['/testing/', 'Testing'],
@@ -84,6 +77,24 @@ module.exports = {
 					['/best-practices/templates/templates', 'Templates'],
 					['/best-practices/routing/routing', 'Routing'],
 					['/best-practices/vuex/vuex', 'Vuex']
+				]
+			},
+			{
+				title: 'Advanced Features',
+				collapsable: false,
+				children: [
+					['/advanced/', 'Introduction'],
+					['/advanced/vue3/vue3', 'Vue 3'],
+					['/advanced/configurations/configurations', 'Configurations'],
+					['/advanced/plugins/plugins', 'Plugins'],
+					['/advanced/mixins/mixins', 'Mixins'],
+					['/advanced/animations/animations', 'Animations'],
+					['/advanced/pwa/pwa', 'PWA'],
+					['/advanced/ssr/ssr', 'Server Side Rendering'],
+					['/advanced/nuxt/nuxt', 'Nuxt'],
+					['/advanced/composition-api/composition-api', 'Composition Api'],
+					['/advanced/components/components', 'Design Patterns'],
+					['/advanced/typescript/typescript', 'TypeScript']
 				]
 			}
 		]
