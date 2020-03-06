@@ -1,7 +1,3 @@
-### Communication
-
-We're all set, now we know how to create our custom components and this will help us with code reuse and composition. One thing that is missing is how we can communicate between components. Vuejs provide us two simple but really powerful ways to pass data between our components and this will be pretty familiar if you are used to use HTML attributes.
-
 ### Props
 
 One of the adventages of creating custom components is the ability to define their own logic, that's when the so called **_props_** comes to the equation.

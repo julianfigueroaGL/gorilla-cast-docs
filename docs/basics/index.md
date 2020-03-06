@@ -2,7 +2,14 @@
 
 ## Relevant terms
 
-In this topic we will cover => Data Models, Virtual DOM, Flux Design Pattern, Installation, VUE-CLI, VUE-UI, among others
+In this topic we will cover
+
+1. [Data Models](/basics/#data-models)
+2. [Virtual DOM](/basics/#virtual-dom)
+3. [Flux Design Pattern](/basics/#flux-design-pattern)
+4. [Installation](/basics/#installation)
+5. [vue-cli](/basics/#vue-cli)
+
 
 ### Data Models
 
@@ -54,6 +61,9 @@ npm install -g @vue/cli
 # OR
 yarn global add @vue/cli
 ```
+
+For more details about the `vue-cli` here's the [official docs](https://cli.vuejs.org/).
+
 
 ### Creating a Project
 

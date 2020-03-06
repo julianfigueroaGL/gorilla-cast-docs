@@ -1,38 +1,38 @@
 # Composition Api
 
-Introducing the `Composition API`, a set of additive, function-based PAIs that allow flexible composition of components logic.
+Introducing the `Composition API`, a set of additive, function-based APIs that allow flexible composition of components logic.
 
-This is one of the main features of [Vue 3](/advanced/vue3/vue3/)
+This is one of the main features of [Vue 3](/advanced/vue3/vue3/).
 
 ## Basic Example
 
 ```html
 <template>
-	<button @click="increment">
-		Count is: {{ state.count }}, double is: {{ state.double }}
-	</button>
+  <button @click="increment">
+    Count is: {{ state.count }}, double is: {{ state.double }}
+  </button>
 </template>
 
 <script>
-	import { reactive, computed } from 'vue';
+  import { reactive, computed } from "vue";
 
-	export default {
-		setup() {
-			const state = reactive({
-				count: 0,
-				double: computed(() => state.count * 2)
-			});
+  export default {
+    setup() {
+      const state = reactive({
+        count: 0,
+        double: computed(() => state.count * 2)
+      });
 
-			function increment() {
-				state.count++;
-			}
+      function increment() {
+        state.count++;
+      }
 
-			return {
-				state,
-				increment
-			};
-		}
-	};
+      return {
+        state,
+        increment
+      };
+    }
+  };
 </script>
 ```
 

@@ -6,15 +6,15 @@
 
 ### Using Pre-processors
 
-In webpack, all pre-processors need to be applied with a corresponding loader, this is where `vue-loader` comes handy
+In webpack, all pre-processors need to be applied with a corresponding loader, this is where `vue-loader` comes handy.
 
 ### Assert URL Handling
 
-By default, `vue-loader` process styles and templates files with [css-loader](https://github.com/webpack/css-loader) and Vue template compiler
+By default, `vue-loader` process styles and templates files with [css-loader](https://github.com/webpack/css-loader) and Vue template compiler.
 
 ### Advanced Loader Configuration
 
-In case you want to: apply a custom loader string, overwrite the built-in loader configuration, pre-process a specif language you need to specify the `loaders` option for `vue-loader`
+In case you want to: apply a custom loader string, overwrite the built-in loader configuration, pre-process a specif language you need to specify the `loaders` option for `vue-loader`.
 
 ### Extracting CSS File
 
