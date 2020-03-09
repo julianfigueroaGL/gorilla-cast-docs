@@ -10,7 +10,6 @@ In this topic we will cover
 4. [Installation](/basics/#installation)
 5. [vue-cli](/basics/#vue-cli)
 
-
 ### Data Models
 
 Data modeling is the process of creating a data model
@@ -19,11 +18,13 @@ Data modeling is the process of creating a data model
 
 ### Virtual DOM
 
-Vue accomplishes this by building a virtual DOM to keep track of the changes it needs to make to the real DOM
+Vue.js accomplishes this by building a virtual DOM to keep track of the changes it needs to make to the real DOM
 
 ### Flux Design Pattern
 
-The components in Flux's architecture interact more like an EventBus and less like an MVC. As mentioned earlier, Flux is not actually a library or a framework, it is a new kind of architecture that Facebook created to work with React:
+The components in Flux's architecture interact more like an EventBus and less like an MVC. Flux is not actually a library or a framework, it's a pattern created by Facebook and implemented in React.
+
+Structure:
 
 - Actions: Helpers that pass data to the Dispatcher
 - Dispatcher: Receives these Actions and broadcast paylodas to registered callbacks
@@ -64,7 +65,6 @@ yarn global add @vue/cli
 
 For more details about the `vue-cli` here's the [official docs](https://cli.vuejs.org/).
 
-
 ### Creating a Project
 
 ```bash
@@ -78,8 +78,8 @@ npm run serve
 You should now be able to visit [http://localhost:8080](http://localhost:8080) to see your local server running!
 :::
 
-## Debugging your Vue Application
+## Debugging your Vue.js Application
 
 When developers creates Modern Web Applications (SPA), they use several different libraries, because of this is needed to debbug the Web App
 
-[Vue Debbug Process](https://vuejs.org/v2/cookbook/debugging-in-vscode.html)
+[Vue.js Debbug Process](https://vuejs.org/v2/cookbook/debugging-in-vscode.html)

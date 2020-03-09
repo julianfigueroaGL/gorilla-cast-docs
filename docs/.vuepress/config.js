@@ -1,5 +1,5 @@
 module.exports = {
-	title: 'Vue Js Bootcamp',
+	title: 'Vue.js Bootcamp',
 	dest: './public',
 	base: '/gorilla-cast-docs/',
 	themeConfig: {

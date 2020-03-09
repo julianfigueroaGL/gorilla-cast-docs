@@ -5,11 +5,11 @@ Software companies have to provide an excellent and performance product without 
 
 ## Official Test Page
 
-[Testing with Vue JS](https://vue-test-utils.vuejs.org/)
+[Testing with Vue.js](https://vue-test-utils.vuejs.org/)
 
 ## External Content
 
-[Writing a Vue JS unit test with Jest](https://www.youtube.com/watch?v=vQ4A7EfAHOg)
+[Writing a Vue.js unit test with Jest](https://www.youtube.com/watch?v=vQ4A7EfAHOg)
 
 ## Test runner
 

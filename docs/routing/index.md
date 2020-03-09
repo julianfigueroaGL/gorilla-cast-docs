@@ -1,10 +1,11 @@
 # Routing
 
-Now we have all the basic concepts of vuejs, its components & lifecycles and how to communicate between them. So far so good, but most of modern UI applications are not simply static sites right?. How about navigating between pages and dynamically load different components based on that navigation? Vuejs provides a powerfull plugin library for those use cases where your application will dynamically load different components based on some kind of routing. That's all we know as Single Page Applications.
+Now we know the basis of Vue.js, we know how to create components, use lifecycle features and communicate multiple components. Quite a few useful things, but most modern UI applications are usually more dynamic than this.
+How about navigating between pages and dynamically loading different components based on that navigation? Vue.js provides a powerfull plugin library for those use cases where your application will dynamically load different components based on some kind of routing. That's all we know as Single Page Applications - SPA.
 
 ## Installation
 
-Vuejs recommends for most Single Page Applications the officially supported [vue-router library.](https://github.com/vuejs/vue-router)
+Vue.js recommends for most Single Page Applications the officially supported [vue-router library.](https://github.com/vuejs/vue-router)
 
 ### Using CDN
 
@@ -29,8 +30,8 @@ yarn add vue-router
 When used with a module system, you must explicitly install the router via Vue.use():
 
 ```javascript
-import Vue from "vue";
-import VueRouter from "vue-router";
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 ```

@@ -1,17 +1,17 @@
 # Components
 
-On the Internet, we could find a lot of good and extensive definitions about what a component is and how it relates to Vue, but here’s a simple and useful definition for you: components are reusable blocks that we create to build our UIs in a more flexible, scalable and performant way.
+On the Internet, we could find a lot of good and extensive definitions about what a component is and how it relates to Vue.js, but here’s a simple and useful definition for you: components are reusable blocks that we create to build our UIs in a more flexible, scalable and performant way.
 
-Vue offers two main ways to express components. First, we have directly made components, which are built using a direct Vue instance as shown below:
+Vue.js offers two main ways to express components. First, we have directly made components, which are built using a direct Vue.js instance as shown below:
 
 ```javascript
-Vue.component("button-incrementer", {
-  data: function() {
-    return {
-      greeting: "Hello Gorilla Logic!"
-    };
-  },
-  template: "<p>{{ greeting }}</p>"
+Vue.component('button-incrementer', {
+	data: function() {
+		return {
+			greeting: 'Hello Gorilla Logic!'
+		};
+	},
+	template: '<p>{{ greeting }}</p>'
 });
 ```
 
@@ -19,7 +19,7 @@ Then, we have the SFCs or Single File Components, where we can organize our logi
 
 ```vue
 <template>
-  <p>{{ greeting }}</p>
+	<p>{{ greeting }}</p>
 </template>
 
 <script>
@@ -34,19 +34,19 @@ exports default {
 
 <style scoped>
 p {
-  font-size: 2em;
-  text-align: center;
+	font-size: 2em;
+	text-align: center;
 }
 </style>
 ```
 
 ### Splitting Components
 
-Vue offers another approach to use single file components, where we can split our logic into multiple files as shown below:
+Vue.js offers another approach to use single file components, where we can split our logic into multiple files as shown below:
 
 ```html
 <template>
-  <div>Component's skeleton</div>
+	<div>Component's skeleton</div>
 </template>
 <script src="./my-component.js"></script>
 <style src="./my-component.css"></style>
@@ -64,7 +64,7 @@ This is the skeleton of the component, mostly based on HTML but also enabled to 
 
 ```html
 <template>
-  <p>{{ greeting }}</p>
+	<p>{{ greeting }}</p>
 </template>
 ```
 
@@ -75,11 +75,11 @@ This is where the component's logic resides. The default approach must `export d
 ```vue
 <script>
 export default {
-  data: function() {
-    return {
-      greeting: "Hello"
-    };
-  }
+	data: function() {
+		return {
+			greeting: 'Hello'
+		};
+	}
 };
 </script>
 ```
@@ -99,7 +99,7 @@ p {
 
 ## Component Composition
 
-There are multiple approaches (basic and advanced) to create components, but all of them share some common logic around building vuejs components. Here are the key concepts:
+There are multiple approaches (basic and advanced) to create components, but all of them share some common logic around building Vue.js components. Here are the key concepts:
 
 ### Data
 
@@ -117,7 +117,7 @@ data: function () {
 
 ### Properties
 
-Although data is useful to determine component's behavior, it's also important to have the ability to pass this data from parent components and/or pieces of our application and make the component reusable and configurable. This is when properties come into place. `props` are nothing but data we pass to a component. Here is how we can define a properties in a Vue.js component:
+Although data is useful to determine component's behavior, it's also important to have the ability to pass this data from parent to child components and/or pieces of our application and make the component reusable and configurable. This is when properties come into place. Props are nothing but data we pass to a component. Here is how we can define a properties in a Vue.js component:
 
 ```javascript
 props: {
@@ -141,23 +141,23 @@ Methods are functions inside our Vue components, and these are especially useful
 
 ```vue
 <template>
-  <button @click="handleClick">
-    Click to Greet
-  </button>
+	<button @click="handleClick">
+		Click to Greet
+	</button>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      greeting: "Hello Gorilla Logic"
-    };
-  },
-  methods: {
-    handleClick: () => {
-      console.log(this.greeting);
-    }
-  }
+	data() {
+		return {
+			greeting: 'Hello Gorilla Logic'
+		};
+	},
+	methods: {
+		handleClick: () => {
+			console.log(this.greeting);
+		}
+	}
 };
 </script>
 ```
@@ -168,9 +168,9 @@ Please consider that methods are not cached, meaning the method will be executed
 
 ### Computed Properties
 
-Computed properties are meant to render properties that depend on a complex or elaborated logic behind the scenes. Even though Vue accepts in-template expressions, good practices always recommend to use computed properties approach rather than creating complex and less readable in-template expressions. Let's see a clear use case:
+Computed properties are meant to render properties that depend on a complex or elaborated logic behind the scenes. Even though Vue.js accepts in-template expressions, good practices always recommend to use computed properties approach rather than creating complex and less readable in-template expressions. Let's see a clear use case:
 
-#### In-tempalte expression
+#### In-template expression
 
 Here we are modifying a data property directly in our template, which makes the code less readable and harder to maintain.
 
@@ -182,27 +182,27 @@ Here we are modifying a data property directly in our template, which makes the 
 
 #### Computed Property
 
-On the other hand, with computed properties, we're delegating the transformation wihtin a function that will eventually use the defined data property.
+On the other hand, with computed properties, we're delegating the transformation within a function that will eventually use the defined data property.
 
 ```vue
 <template>
-  <div id="greeting-filtered">
-    {{ greetingFiltered }}
-  </div>
+	<div id="greeting-filtered">
+		{{ greetingFiltered }}
+	</div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      greeting: "Hello Gorilla Logic"
-    };
-  },
-  computed: {
-    greetingFiltered: () => {
-      return greeting.replace(/hello/gi, "Hi").toUpperCase();
-    }
-  }
+	data() {
+		return {
+			greeting: 'Hello Gorilla Logic'
+		};
+	},
+	computed: {
+		greetingFiltered: () => {
+			return greeting.replace(/hello/gi, 'Hi').toUpperCase();
+		}
+	}
 };
 </script>
 ```
@@ -215,24 +215,24 @@ Watchers are another (more generic and imperative) way of reacting to data chang
 
 ```vue
 <template>
-  <div id="demo">{{ fullName }}</div>
+	<div id="demo">{{ fullName }}</div>
 </template>
 
 <script>
 export default {
-  data: {
-    firstName: "James",
-    lastName: "Bond",
-    fullName: "James Bond"
-  },
-  watch: {
-    firstName: function(val) {
-      this.fullName = val + " " + this.lastName;
-    },
-    lastName: function(val) {
-      this.fullName = this.firstName + " " + val;
-    }
-  }
+	data: {
+		firstName: 'James',
+		lastName: 'Bond',
+		fullName: 'James Bond'
+	},
+	watch: {
+		firstName: function(val) {
+			this.fullName = val + ' ' + this.lastName;
+		},
+		lastName: function(val) {
+			this.fullName = this.firstName + ' ' + val;
+		}
+	}
 };
 </script>
 ```
@@ -243,3 +243,12 @@ In case you are interested on deep diving the topics above, here are some useful
 
 - [Vuejs.org](https://vuejs.org/) Learn more about this concepts in the official docs.
 - [Vuemastery Courses](https://vuejs.org/) A more detailed and interactive path for beginners.
+
+## Project Tasks
+
+As described on the initial section, this Bootcamp is intended to be an experience while building a Vue.js based Podcast Player. Let's use the concepts we recently learnt to creat the basis for this app with the following tasks:
+
+1. Create folders structure using Vue CLI including vueitfy as main design system.
+2. Add a folder called API and use the include the utilies listed here as your main "fake" data provider.
+3. Create configuration files.
+4. Configure main base router.

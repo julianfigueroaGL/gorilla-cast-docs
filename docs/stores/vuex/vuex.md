@@ -2,11 +2,11 @@
 
 When our application starts to grow in size and complexity, state management using _props_ and _emit_-ing events tend to fall behind, codebase becomes more harder to mantain and bugs are more likely to happen. That's when a more robust state management pattern helps a lot reducing complexity, preventing bugs and making the codebase easier to mantain.
 
-`Vuex` is the officially supported Flux implementation for Vuejs Applications. Vuex is a state management pattern + library for Vue.js applications. It serves as a centralized store for all the components in an application, with rules ensuring that the state can only be mutated in a predictable fashion.
+`Vuex` is the officially supported Flux implementation for Vue.js Applications. Vuex is a state management pattern + library for Vue.js applications. It serves as a centralized store for all the components in an application, with rules ensuring that the state can only be mutated in a predictable fashion.
 
 ## Installation
 
-Vuejs recommends for most Single Page Applications implementing a centralized state store the officially supported [vuex library.](https://github.com/vuejs/vuex)
+Vue.js recommends for most Single Page Applications implementing a centralized state store the officially supported [vuex library.](https://github.com/vuejs/vuex)
 
 ### Using CDN
 
@@ -31,8 +31,8 @@ yarn add vuex
 When used with a module system, you must explicitly install Vuex via Vue.use():
 
 ```javascript
-import Vue from "vue";
-import Vuex from "vuex";
+import Vue from 'vue';
+import Vuex from 'vuex';
 
 Vue.use(Vuex);
 ```
@@ -45,7 +45,7 @@ At the center of every Vuex application is the **store**. A "store" is basically
 
 <img :src="$withBase('/vuex-workflow.png')" alt="Vuex Diagram">
 
-1. Vuex stores are reactive. When Vue components retrieve state from it, they will reactively and efficiently update if the store's state changes.
+1. Vuex stores are reactive. When Vue.js components retrieve state from it, they will reactively and efficiently update if the store's state changes.
 
 2. You cannot directly mutate the store's state. The only way to change a store's state is by explicitly **committing mutations**. This ensures every state change leaves a track-able record, and enables tooling that helps us better understand our applications.
 
@@ -66,22 +66,22 @@ const store = new Vuex.Store({
 };
 ```
 
-The way to display the _State_ inside the store in our Vue components is through computed properties. Taking adventage of the reactivity of Vuex and computed properties whenever `store.state.count changes[], it will cause the computed property to re-evaluate, and trigger associated DOM updates.
+The way to display the _State_ inside the store in our Vue.js components is through computed properties. Taking adventage of the reactivity of Vuex and computed properties whenever `store.state.count changes[]`, it will cause the computed property to re-evaluate, and trigger associated DOM updates.
 
 ```vue
 <template>
-  <div>
-    <span>{{ counter }}</span>
-  </div>
+	<div>
+		<span>{{ counter }}</span>
+	</div>
 </template>
 <script>
 export default {
-  name: "SimpleCounter",
-  computed: {
-    counter() {
-      return this.$state.count;
-    }
-  }
+	name: 'SimpleCounter',
+	computed: {
+		counter() {
+			return this.$state.count;
+		}
+	}
 };
 </script>
 ```
@@ -90,18 +90,18 @@ Vuex offers a set of helpers functions in order to decouple components from the 
 
 ```vue
 <template>
-  <div>
-    <span>{{ counter }}</span>
-  </div>
+	<div>
+		<span>{{ counter }}</span>
+	</div>
 </template>
 <script>
-import { mapState } from "vuex";
+import { mapState } from 'vuex';
 
 export default {
-  name: "SimpleCounter",
-  computed: mapState(["counter"])
+	name: 'SimpleCounter',
+	computed: mapState(['counter'])
 
-  /** as mapState is an object, using it with
+	/** as mapState is an object, using it with
   additional properties will be as follows:
 
   computed: {
@@ -115,7 +115,7 @@ export default {
 
 ### Getters
 
-You can think of them as computed properties for the _Store_. Like computed properties, a getter result is cached based on its dependencies, and will only re-evaluate when some of its dependencies have changed. Easy way to make use of getters in Vue components is by leveraging the `mapGetters` helper function.
+You can think of them as computed properties for the _Store_. Like computed properties, a getter result is cached based on its dependencies, and will only re-evaluate when some of its dependencies have changed. Easy way to make use of getters in Vue.js components is by leveraging the `mapGetters` helper function.
 
 Getters are really helpfull when we need derived state from the store like this:
 
@@ -131,24 +131,24 @@ Now imagine if more than one component needs to make use of this, resulting in a
 
 Vuex allows us to define "getters" in the store. You can think of them as computed properties for stores. Like computed properties, a getter's result is cached based on its dependencies, and will only re-evaluate when some of its dependencies have changed.
 
-Getters will receive the state as their 1st argument:
+Getters will receive the state as their first argument:
 
 ```javascript
 // Store instantiation
 const store = new Vuex.Store({
-  // State
-  state: {
-    todos: [
-      { id: 1, text: "Todo One", completed: true },
-      { id: 2, text: "Todo Two", completed: false }
-    ]
-  },
-  // Getters
-  getters: {
-    completedTodos: state => {
-      return state.todos.filter(todo => todo.completed);
-    }
-  }
+	// State
+	state: {
+		todos: [
+			{ id: 1, text: 'Todo One', completed: true },
+			{ id: 2, text: 'Todo Two', completed: false }
+		]
+	},
+	// Getters
+	getters: {
+		completedTodos: state => {
+			return state.todos.filter(todo => todo.completed);
+		}
+	}
 });
 ```
 
@@ -156,18 +156,18 @@ The `mapGetters` helper simply maps store getters to local computed properties:
 
 ```vue
 <template>
-  <div>
-    <span>Completed todo count {{ completedTodos }}</span>
-  </div>
+	<div>
+		<span>Completed todo count {{ completedTodos }}</span>
+	</div>
 </template>
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex';
 
 export default {
-  name: "SimpleTodoCounter",
-  computed: {
-    ...mapGetters(["completedTodos"])
-  }
+	name: 'SimpleTodoCounter',
+	computed: {
+		...mapGetters(['completedTodos'])
+	}
 };
 </script>
 ```
@@ -179,19 +179,19 @@ The only way to actually change state in a Vuex store is by committing a mutatio
 ```javascript
 // Store instantiation
 const store = new Vuex.Store({
-  // State
-  state: {
-    count: 0
-  },
-  mutations: {
-    increment(state) {
-      state.count++;
-    },
-    // mutation with a payload
-    incrementBy(state, payload) {
-      state.count += n;
-    }
-  }
+	// State
+	state: {
+		count: 0
+	},
+	mutations: {
+		increment(state) {
+			state.count++;
+		},
+		// mutation with a payload
+		incrementBy(state, payload) {
+			state.count += n;
+		}
+	}
 });
 ```
 
@@ -256,29 +256,29 @@ Let's register a simple action:
 
 ```js
 const store = new Vuex.Store({
-  state: {
-    count: 0
-  },
-  mutations: {
-    increment(state) {
-      state.count++;
-    }
-  },
-  actions: {
-    increment(context) {
-      context.commit("increment");
-    },
-    incrementBy(context) {
-      context.commit("increment");
-    }
-  }
+	state: {
+		count: 0
+	},
+	mutations: {
+		increment(state) {
+			state.count++;
+		}
+	},
+	actions: {
+		increment(context) {
+			context.commit('increment');
+		},
+		incrementBy(context) {
+			context.commit('increment');
+		}
+	}
 });
 ```
 
 Actions are triggered with the `store.dispatch` method.
 
 ```js
-store.dispatch("increment");
+store.dispatch('increment');
 ```
 
 This might sound similar to mutations. But here's the deal, **Mutations are sycnronous** actions don't. This takes a lot of importance when we may need side effects in our application
@@ -351,58 +351,58 @@ After [installing Vuex](/stores/vuex/vuex.html#installation), let's create a sto
 
 ```javascript
 // main.js
-import Vue from "vue";
-import App from "./App.vue";
-import Vuex from "vuex";
+import Vue from 'vue';
+import App from './App.vue';
+import Vuex from 'vuex';
 
 Vue.config.productionTip = false;
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
-  state: {
-    count: 0
-  },
-  mutations: {
-    increment: state => state.count++,
-    decrement: state => state.count--
-  }
+	state: {
+		count: 0
+	},
+	mutations: {
+		increment: state => state.count++,
+		decrement: state => state.count--
+	}
 });
 
 new Vue({
-  store,
-  render: h => h(App)
-}).$mount("#app");
+	store,
+	render: h => h(App)
+}).$mount('#app');
 ```
 
 ```vue
 <!-- App.vue -->
 <template>
-  <div id="app">
-    <h5>The simplest counter</h5>
-    <p>{{ count }}</p>
-    <p>
-      <button @click="increment">+</button>
-      <button @click="decrement">-</button>
-    </p>
-  </div>
+	<div id="app">
+		<h5>The simplest counter</h5>
+		<p>{{ count }}</p>
+		<p>
+			<button @click="increment">+</button>
+			<button @click="decrement">-</button>
+		</p>
+	</div>
 </template>
 
 <script>
 export default {
-  name: "App",
-  computed: {
-    count() {
-      return this.$store.state.count;
-    }
-  },
-  methods: {
-    increment() {
-      this.$store.commit("increment");
-    },
-    decrement() {
-      this.$store.commit("decrement");
-    }
-  }
+	name: 'App',
+	computed: {
+		count() {
+			return this.$store.state.count;
+		}
+	},
+	methods: {
+		increment() {
+			this.$store.commit('increment');
+		},
+		decrement() {
+			this.$store.commit('decrement');
+		}
+	}
 };
 </script>
 ```

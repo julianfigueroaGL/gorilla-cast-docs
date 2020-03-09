@@ -1,14 +1,40 @@
 # Best practices for Routing
 
-## Routing Mode
+## Use same component in multiple routes
 
-First, you should determine if you are going with [HTML 5 history mode or hash mode](https://router.vuejs.org/guide/essentials/history-mode.html) It is 2018, and I definitely recommend that you use HTML5 history mode.
+Sometimes you as a developer are in a situation where yoo have to use the same component for multiple routes. To solve this issue, Vue.js reuses existing components instead of creating once again.
 
-If you use history mode, then it means your client-side router will need to work in sync with your server-side router.
+::: danger Bad
+
+```js
+// router.js
+const routes = [
+	{
+		path: '/path1',
+		component: NewComponent
+	},
+	{
+		path: '/path2',
+		component: NewComponent
+	}
+];
+```
+
+You need to add a `:key` property into the `<router-view>` element. Doing this way the router recognize when the page is different.
+
+:::
+::: tip Good
+
+```js
+// App.vue
+<router-view :key='$route.path' />
+```
+
+:::
 
 ## Micro-frontends
 
-[Micro-frontends](https://micro-frontends.org/) is the term you are looking for. Basically, it is your first line of segregation. You should split your app into multiple smaller apps. Each app will have its root component, router, models, services, etc. You will share many of the components (Of course, word very large application is important. And I literally mean it.).
+[Micro-frontends](https://micro-frontends.org/) is the term you are looking for. Basically, it is your first line of segregation. You should split your app into multiple smaller apps. Each app will have its root component, router, models, services, etc. You will still share components between each small app (of course, its important in a very large application to achieve reusability).
 
 ## Mono-repo considerations
 
@@ -26,17 +52,17 @@ Routing module should be further split into smaller modules. Use simple function
 
 ```js
 const route: RouteConfig = {
-  path: "/some-path",
-  component: AppComponent,
-  children: [getWelcomeRoute(), getDashboardRoute()]
+	path: '/some-path',
+	component: AppComponent,
+	children: [getWelcomeRoute(), getDashboardRoute()]
 };
 
 function getWelcomeRoute(): RouteConfig {
-  return {
-    name: ROUTE_WELCOME,
-    path: "",
-    component: WelcomeComponent
-  };
+	return {
+		name: ROUTE_WELCOME,
+		path: '',
+		component: WelcomeComponent
+	};
 }
 ```
 
@@ -44,14 +70,14 @@ At route level, you should consider doing lazy loading of the modules. This will
 
 ```js
 function getLazyWelcomeRoute(): RouteConfig {
-  // IMPORTANT for lazy loading
-  const LazyWelcomeComponent = () => import("views/WelcomeComponent.vue");
+	// IMPORTANT for lazy loading
+	const LazyWelcomeComponent = () => import('views/WelcomeComponent.vue');
 
-  return {
-    name: ROUTE_WELCOME,
-    path: "",
-    component: LazyWelcomeComponent
-  };
+	return {
+		name: ROUTE_WELCOME,
+		path: '',
+		component: LazyWelcomeComponent
+	};
 }
 ```
 
@@ -63,11 +89,11 @@ We're assuming that you are using some sort of data store like `Redux` or `Vuex`
 
 ```js
 export function makeRouter(store: Store<AppState>): VueRouter {
-  // Now you can access store here
-  return new VueRouter({
-    mode: "history",
-    routes: [getWelcomeRoute(store)]
-  });
+	// Now you can access store here
+	return new VueRouter({
+		mode: 'history',
+		routes: [getWelcomeRoute(store)]
+	});
 }
 ```
 

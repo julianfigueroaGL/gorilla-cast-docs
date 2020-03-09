@@ -1,6 +1,6 @@
 # Advanced
 
-Some of the advanced topics of Vuejs we'll be covering in this section:
+Some of the Vue.js advanced topics we'll be covering in this section:
 
 1. [Vue 3](/advanced/vue3/vue3/)
 2. [Configurations](/advanced/configurations/configurations/)

@@ -1,6 +1,6 @@
 # Vue 3
 
-This will be the next version of Vue JS, it was announced back in Fall of 2018 by Evan You - vuejs creator.
+This will be the next version of Vue.js, it was announced back in Fall of 2018 by Evan You - Vue.js creator.
 
 ## Release Date
 
@@ -14,7 +14,7 @@ Vue 3 will be faster, lighter and more maintainable according to Evan You.
 ### Composition API
 
 This feature will allow for a function way of writing your component, inspired by React Hooks.
-Now you can encasulate kogic into `composition functions` and reuse that logic across components.
+Now you can encasulate logic into `composition functions` and reuse that logic across components.
 
 ### API Reference
 

@@ -1,9 +1,11 @@
 # Best Practices
 
-- [Components](/best-practices/components/components/)
-- [Templates](/best-practices/templates/templates/)
-- [Routing](/best-practices/routing/routing/)
-- [Vuex](/best-practices/vuex/vuex/)
+Some of the Vue.js best practices topics we'll be covering in this section:
+
+1. [Components](/best-practices/components/components/)
+2. [Templates](/best-practices/templates/templates/)
+3. [Routing](/best-practices/routing/routing/)
+4. [Vuex](/best-practices/vuex/vuex/)
 
 ## Other Best pratices:
 
@@ -17,7 +19,7 @@ Vue.config.performance = true;
 
 Also consider to use:
 
-- [Vue performance DevTool extension for Chrome](https://chrome.google.com/webstore/detail/vue-performance-devtool/koljilikekcjfeecjefimopfffhkjbne?hl=en)
+- [Vue.js performance DevTool extension for Chrome](https://chrome.google.com/webstore/detail/vue-performance-devtool/koljilikekcjfeecjefimopfffhkjbne?hl=en)
 
 ### Error handling
 
@@ -71,28 +73,64 @@ data() {
 ::: danger Bad
 
 ```js
-import landingImage from "../images/landing";
+<template>
+	<div id="app">
+		<img alt="Vue logo" :src="logo" />
+		<HelloWorld msg="Welcome to Your Vue.js App" />
+	</div>
+</template>
+
+<script>
+import HelloWorld from './components/HelloWorld.vue';
+import image from './assets/logo.png';
+
 export default {
-  data() {
-    return {
-      landingImage: "..."
-    };
-  }
+	name: 'App',
+	components: {
+		HelloWorld
+	},
+	data() {
+		return {
+			logo: image
+		};
+	}
 };
+</script>
 ```
 
 :::
+
+There's no need to define a property in Data to directly modify the DOM.
+
 ::: tip Good
 
 ```js
-import landingImage from '../images/landing';
+<template>
+	<div id="app">
+		<img alt="Vue logo" :src="logo" />
+		<HelloWorld msg="Welcome to Your Vue.js App" />
+	</div>
+</template>
+
+<script>
+import HelloWorld from './components/HelloWorld.vue';
+import image from './assets/logo.png';
 
 export default {
-	created() {
-		this.landingImage: '...'
-	};
-}
+	name: 'App',
+	components: {
+		HelloWorld
+	},
+	computed: {
+		logo() {
+			return image;
+		}
+	}
+};
+</script>
 ```
+
+Instead of declaring static props inside the `data` property, just declare a computed property to manipulate the DOM.
 
 :::
 

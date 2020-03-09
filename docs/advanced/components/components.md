@@ -4,13 +4,13 @@ In the process of web developement you want create manageable and maintainable c
 
 ## Why is important the communication between components
 
-Creating a Vuejs app you need to make the components as isolated as they can be, this would make them in reusable and decoupled/loosely coupled shape.
+By default, in Vue.js the components are isolated. This means that you can't reference parent data directly from child component's template. In order to pass data to child components (with isolated scope) you should rather use `props`.
 
 ## Main types of communication between components
 
 ### Direct parent-child communication
 
-This is the common model of components communication in Vuejs, it works passing values as `props` form Parent to child.
+This is the common model of components communication in Vue.js, it works passing values as `props` from parent to child.
 
 <img src="https://cms-assets.tutsplus.com/uploads/users/2028/posts/32354/image/vueccparentchild.png" alt="Parent-child pattern">
 
@@ -35,22 +35,22 @@ Child Component:
 
 ```html
 <template>
-  <div>
-    {{ track }}
-  </div>
+	<div>
+		{{ track }}
+	</div>
 </template>
 <script>
-  export default {
-    props: {
-      track: {
-        default() {
-          return {};
-        },
-        required: true,
-        type: Object
-      }
-    }
-  };
+	export default {
+		props: {
+			track: {
+				default() {
+					return {};
+				},
+				required: true,
+				type: Object
+			}
+		}
+	};
 </script>
 ```
 
@@ -72,11 +72,16 @@ created () {
 
 ### [Vuex](/stores/vuex/vuex/)
 
+Using Vuex you're implementing the Flux architecture.
+
 ### Dependency Injection
 
-Allows you to define a service via the `provide` property, which should be an object or a function that returns an object, and make it available to all of the component's descendants, not juts it's direct children.
+There are two alternatives on how Vue.js handles dependency injection modules:
 
-Please avoid using `this.$root` because can creates too many dependencies.
+- vue-component: is very lightweight DI framework which allows you to register and manually or automatically inject anything anywhere.
+- vue-inject: is a bit more functional, it allows all what vue-component do. But also it does introduce simple service/factory/constant implementation with automatic injection support (as arguments) for previously registered entities.
+
+We recommend to use `Vue-component` if you need a simple yet elegant DI solution for your application and `Vue-inject` if you miss Angular-style injections or just need more versatile.
 
 ### How to use the right pattern
 

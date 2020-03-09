@@ -1,6 +1,6 @@
 # Basic Routing
 
-Defining routes for a Vue application using `vue-router` is deadly simple, by defining an Array of objects with the following properties. [API Reference](https://router.vuejs.org/api/#router-construction-options)
+Defining routes for a Vue.js application using `vue-router` is deadly simple, by defining an Array of objects with the following properties. [API Reference](https://router.vuejs.org/api/#router-construction-options)
 
 ```javascript
 import Home from '@components/Home'
@@ -53,11 +53,11 @@ Once routes have been defined in our Vue instance, `vue-router` provides a serie
 ```
 
 ```javascript
-Vue.component("HeaderComponent", {
-  // use router-link component for navigation.
-  // specify the link by passing the `to` prop.
-  // `<router-link>` will be rendered as an `<a>` tag by default
-  template: `
+Vue.component('HeaderComponent', {
+	// use router-link component for navigation.
+	// specify the link by passing the `to` prop.
+	// `<router-link>` will be rendered as an `<a>` tag by default
+	template: `
         <nav>
             <router-link to="/" />
             <router-link to="/about" />

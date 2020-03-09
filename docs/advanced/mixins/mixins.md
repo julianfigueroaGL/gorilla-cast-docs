@@ -1,9 +1,9 @@
 # Mixins
 
-Mixns are chinks of code that can be reused. It's a way to implement the DRY principle. `Don't Repeat Yourself`
+Mixns are chunks of code that can be reused. It's a way to implement the DRY principle. `Don't Repeat Yourself`.
 
-Mixins are a flexible way to distribute reusable functionalities for Vue Components. A mixin object can contain any component options.
-When a comoponent uses a mixin, all options in the mixin will be `mixed` into the component's own options.
+Mixins are a flexible way to distribute reusable functionalities for Vue.js Components. A mixin object can contain any component options.
+When a component uses a mixin, all options in the mixin will be `mixed` into the component's own options.
 
 ## Features
 
@@ -11,20 +11,20 @@ When a comoponent uses a mixin, all options in the mixin will be `mixed` into th
 
 ```js
 export const exampleMixin = {
-  created() {
-    console.log("👋 from Mixin");
-  }
+	created() {
+		console.log('👋 from Mixin');
+	}
 };
 ```
 
-After creating our first mixin, we can use it in a compomponent in order to extend the funcionality.
+After creating our first mixin, we can use it in a component in order to extend the funcionality.
 
 ```html
 <script>
-  import { exampleMixin } from "../mixins/exampleMixin.js";
-  export default {
-    mixins: [exampleMixin]
-  };
+	import { exampleMixin } from '../mixins/exampleMixin.js';
+	export default {
+		mixins: [exampleMixin]
+	};
 </script>
 ```
 
@@ -34,17 +34,20 @@ Mixins will always be executed before the components.
 
 ```js
  <script>
-    import { exampleMixin } from '../mixins/exampleMixin.js'
+    import { exampleMixin } from '../mixins/exampleMixin.js';
     export default {
       mixins: [exampleMixin],
       created() {
         console.log('🤘🏼 from the component.')
       }
-    }
-    </script>
+    };
+</script>
 ```
 
-The output from that would we printing first the Mixin console and then the one from the component
+As result we get:
+
+1. The mixing was console first.
+2. The component console came after.
 
 ```{8}
 👋 from Mixin
