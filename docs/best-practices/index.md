@@ -1,9 +1,11 @@
 # Best Practices
 
-- [Components](/best-practices/components/components/)
-- [Templates](/best-practices/templates/templates/)
-- [Routing](/best-practices/routing/routing/)
-- [Vuex](/best-practices/vuex/vuex/)
+Some of the Vue.js best practices topics we'll be covering in this section:
+
+1. [Components](/best-practices/components/components/)
+2. [Templates](/best-practices/templates/templates/)
+3. [Routing](/best-practices/routing/routing/)
+4. [Vuex](/best-practices/vuex/vuex/)
 
 ## Other Best pratices:
 
@@ -98,7 +100,7 @@ export default {
 
 :::
 
-There's no need to define a property in Data to directly modify the DOM
+There's no need to define a property in Data to directly modify the DOM.
 
 ::: tip Good
 
@@ -128,7 +130,8 @@ export default {
 </script>
 ```
 
-Instead of declaring static data inside the Data property, just declare a computed property to manipulate the DOM
+Instead of declaring static props inside the `data` property, just declare a computed property to manipulate the DOM.
+
 :::
 
 ### Conditional Rendering

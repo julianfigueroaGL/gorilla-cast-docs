@@ -1,6 +1,6 @@
 ### Event-emitter pattern
 
-So far we've just seen how to communicate components passing down data from parent to children. And how about the other way around?
+So far we've just seen how to communicate components passing down data from parent to children. And how about the other way around?.
 
 Vue's children to parent communication is provided by [`$emit`](https://vuejs.org/v2/api/#vm-emit) API using the event emitter pattern.
 

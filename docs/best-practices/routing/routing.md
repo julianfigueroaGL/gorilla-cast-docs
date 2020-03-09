@@ -34,7 +34,7 @@ You need to add a `:key` property into the `<router-view>` element. Doing this w
 
 ## Micro-frontends
 
-[Micro-frontends](https://micro-frontends.org/) is the term you are looking for. Basically, it is your first line of segregation. You should split your app into multiple smaller apps. Each app will have its root component, router, models, services, etc. You will share many of the components (Of course, a very large application is important).
+[Micro-frontends](https://micro-frontends.org/) is the term you are looking for. Basically, it is your first line of segregation. You should split your app into multiple smaller apps. Each app will have its root component, router, models, services, etc. You will still share components between each small app (of course, its important in a very large application to achieve reusability).
 
 ## Mono-repo considerations
 

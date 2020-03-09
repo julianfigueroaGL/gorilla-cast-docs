@@ -1,7 +1,7 @@
 # Routing
 
-Now we have all the basic concepts of Vue.js, its components and lifecycles and how to communicate between them. So far so good, but most of modern UI applications are not simply static sites right?.
-How about navigating between pages and dynamically load different components based on that navigation? Vue.js provides a powerfull plugin library for those use cases where your application will dynamically load different components based on some kind of routing. That's all we know as Single Page Applications - SPA.
+Now we know the basis of Vue.js, we know how to create components, use lifecycle features and communicate multiple components. Quite a few useful things, but for most modern UI applications are usually more dynamic than this.
+How about navigating between pages and dynamically loading different components based on that navigation? Vue.js provides a powerfull plugin library for those use cases where your application will dynamically load different components based on some kind of routing. That's all we know as Single Page Applications - SPA.
 
 ## Installation
 

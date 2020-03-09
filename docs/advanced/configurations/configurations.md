@@ -10,7 +10,7 @@ In webpack, all pre-processors need to be applied with a corresponding loader, t
 
 ### Assert URL Handling
 
-By default, `vue-loader` process styles and templates files with [css-loader](https://github.com/webpack/css-loader) and Vue.js template compiler.
+By default, `vue-loader` processes styles and templates files with [css-loader](https://github.com/webpack/css-loader) and Vue.js template compiler.
 
 ### Advanced Loader Configuration
 

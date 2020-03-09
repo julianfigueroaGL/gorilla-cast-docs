@@ -28,7 +28,7 @@ Parent component:
 <my-component :firstProp="someValue" @nameOfEvent="”doSomething”"></my-component>
 ```
 
-## Shortcut component registration
+## Shortcut for component registration
 
 In your Vue.js project you can have multiple components, at some point you will have to import them:
 
@@ -102,5 +102,5 @@ Object.keys(components).forEach(function(key) {
 ## Avoid registering all components as global
 
 ::: tip
-You have to set as global components, those ones who can be accessed across the Vue.js application
+You have to set as global components, those ones who can be accessed across the Vue.js application.
 :::
