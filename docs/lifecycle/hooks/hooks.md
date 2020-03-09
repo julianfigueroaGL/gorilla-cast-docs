@@ -77,7 +77,7 @@ export default {
 };
 ```
 
-The component now looks much more simpler and easy to mantain, but we have a lot of new approaches here, let's brekdown the ideas:
+The component now looks much more simpler and easy to mantain, but we have a lot of new approaches here, let's breakdown the ideas:
 
 - The `render`function returning just one element, which is important due to component's definition. In order to do that, the `createElement` function is a key step. This function will be always received as a parameter.
 - The `this.$slots.default` is an important property in the Vue instance, basically stores a default slot tag.
