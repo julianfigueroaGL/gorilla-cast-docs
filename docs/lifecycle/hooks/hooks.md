@@ -1,6 +1,6 @@
 # Lifecycle Hooks
 
-As many other javascript frontend frameworks, Vue runs through a lifecycle flow where we can identify special or key moments.
+As many other JavaScript frontend frameworks, Vue runs through a lifecycle flow where we can identify special or key moments.
 
 <img :src="$withBase('/lifecycle.png')" style="text-align:center"/>
 
@@ -12,7 +12,7 @@ Let's take a look at some useful concepts when it comes to lifecycle.
 
 ## Reactivity
 
-Reactivity is probably one of the most important features when working with Vue.js and even with modern javascript frontend frameworks. To put it on simple words, reactivity is a feature that will allow us to keep track of changes in our components/properties into our Vue instance. Eventually, Vue will internally manage and keep track of change notifications and/or dependency changes.
+Reactivity is probably one of the most important features when working with Vue.js and even with modern Javascript frontend frameworks. To put it on simple words, reactivity is a feature that will allow us to keep track of changes in our components/properties into our Vue instance. Eventually, Vue will internally manage and keep track of change notifications and/or dependency changes.
 
 In order to enable this reactivity feature, Vue takes advantage of the `Object.defineProperty` method introduced in ES5, using it to convert every property into a getter/setter.
 
@@ -22,7 +22,7 @@ Below, is a very ilustrative diagram on how Vue handles reactivity:
 
 ## Data rendering
 
-On the early steps of this bootcamp, we learnt that the `template` is the suggested place to render our data (or the .html file when it comes to splitted components). However, there are specific cases where we want to use a more in depth approach using the `render` function. Let's take a look at this practical use case comming from the official documentation:
+On the early steps of this bootcamp, we learnt that the `template` is the suggested place to render our data (or the .html file when it comes to splitted components). However, there are specific cases where we want to use a more in depth approach using the `render` function. Let's take a look at this practical use case coming from the official documentation:
 
 ```html
 <template>
@@ -48,7 +48,7 @@ On the early steps of this bootcamp, we learnt that the `template` is the sugges
 ```
 
 ```javascript
-module.exports = {
+export default {
   props: {
     level: {
       type: Number,
@@ -58,10 +58,10 @@ module.exports = {
 };
 ```
 
-The first impression about this template is the imperative and verbose code, that makes it harder to mantain. Just think about the fact you want to add another subelement or behavior to each type of header, you'll fin yourself repeating code through all the possible if cases. On situations like this is where the `render` functions comes into place to create the difference and use a different approach, let's refactor this component using it.
+The first impression about this template is the imperative and verbose code, that makes it harder to mantain. Just think about the fact you want to add another subelement or behavior to each type of header, you'll find yourself repeating code through all of the possible if cases. On situations like this is where the `render` functions comes into place to create the difference and use a different approach, let's refactor this component using it.
 
 ```javascript
-module.exports = {
+export default {
   render: createElement => {
     return createElement(
       "h" + this.level, // tag name
@@ -77,19 +77,19 @@ module.exports = {
 };
 ```
 
-The component now look much more simpler and easy to mantain, but we have a lot of new approaches here, let's brekdown the ideas:
+The component now looks much more simpler and easy to mantain, but we have a lot of new approaches here, let's brekdown the ideas:
 
 - The `render`function returning just one element, which is important due to component's definition. In order to do that, the `createElement` function is a key step. This function will be always received as a parameter.
 - The `this.$slots.default` is an important property in the Vue instance, basically stores a default slot tag.
-- Within the render funciton, we can still use the `this`context variable to access properties.
+- Within the render function, we can still use the `this`context variable to access properties.
 
 ## Directives and Data Binding
 
-This two concepts are essential when it comes to Vue.js. Let's first take a look at directives and then the way it's related to data binding:
+These two concepts are essential when it comes to Vue.js. Let's first take a look at directives and then the way it's related to data binding:
 
 ### Directives
 
-Similar to Angular.js/Angular, directives are special symbols we can find on HTML elements. This symbols or tokens tell Vue.js to do something special with the DOM element, for instance, set the innnerText, respond to an event and so on.
+Similar to Angular.js/Angular, directives are special symbols we can find on HTML elements. These symbols or tokens tell Vue.js to do something special with the DOM element, for instance, set the innnerText, respond to an event and so on.
 
 In Vue.js, the convention is to use `v-`as the prefix for every directive. Let's take a look to a very simple example:
 
@@ -101,7 +101,7 @@ In Vue.js, the convention is to use `v-`as the prefix for every directive. Let's
 ```
 
 ```javascript
-module.exports = {
+export default {
   data: function() {
     return {
       greeting: "Hello Gorilla Logic!"
@@ -110,7 +110,7 @@ module.exports = {
 }
 ```
 
-In the example above, we're telling Vue to render the text of the ``` div ```element using a directive ``` v-text ``` which is tied to the data property ```greeting ```.
+In the example above, we're telling Vue to render the text of the ``` div``` element using a directive ``` v-text ``` which is tied to the data property ```greeting ```.
 
 ```html
 <template> 
@@ -119,7 +119,7 @@ In the example above, we're telling Vue to render the text of the ``` div ```ele
 ```
 
 ```javascript
-module.exports = {
+export default {
   methods: {
     clickHandler(){
       console.log('Clicked using a directive');
@@ -132,18 +132,18 @@ In the example above, we're telling Vue to execute a method called ```clickHandl
 
 ### Data Binding
 
-As you migh have noticed, directives are useful to achieve multiple things such as configure event handlers, determine element behavior and bind data. Data binding is a very specific and useful way to render data in components, even more because it takes advantage of Vue.js reactivity implementation to react to data changes. 
+As you might have noticed, directives are useful to achieve multiple things such as configure event handlers, determine element behavior and bind data. Data binding is a very specific and useful way to render data in components, even more because it takes advantage of Vue.js reactivity implementation to react to data changes. 
 
-In the first exampple of data biding, we can expect the innerText of the div DOM element to refresh every time the ``` greeting ```property changes.
+In the first example of data binding, we can expect the innerText of the div DOM element to refresh every time the ``` greeting ```property changes.
 
 ## Event handling
 
-As previously mentioned during the directives explanation, there are special directives in Vue.js that allow us to listen events in DOM elements and eventually execute actions using the power of javascript. Javascript code that reacts to the event can be expressed in multiple ways, for example using inline expressions like ```v-on:clicl="counter += 1" ``` or even component methdos like this ``` v-on:click="methodA" ```, where ``` methodA ``` is a defined component's method.
+As previously mentioned during the directives explanation, there are special directives in Vue.js that allow us to listen events in DOM elements and eventually execute actions using the power of JavaScript. Javascript code that reacts to the event can be expressed in multiple ways, for example using inline expressions like ```v-on:clicl="counter += 1" ``` or even component methdos like this ``` v-on:click="methodA" ```, where ``` methodA ``` is a defined component's method.
 
 
 ## Event propagation management
 
-When working with events, it's important to have control to event behaviors. For instance, when we need to stop the default propagation of a submit event using ```e.preventDefault() ```. Even though we can achieve this using the default approach inside our events, we take advantage of **Event Modifiers** provided by Vue.js. In simple words, event modifiers are suffixes that we can place on even directives in order to determine the behavior of the event a its propagation like this:
+When working with events, it's important to have control over event behaviors. For instance, when we need to stop the default propagation of a submit event, it's pretty common to proceed with a  ```e.preventDefault() ``` expression as the first line of our event handler. Although this approach is fine, we can also take advantage of the **Event Modifiers**. This are nothing but suffixes we place right after the event directives, that allow us to control the propagation of the event itself (without even placing additional logic into our event modifier), for instance:
 
 ```html
 <form @submit.prevent="formHandler"></form>
@@ -163,7 +163,7 @@ The example above, will prevent the default propagation of the submit event, in 
 Now, let's take a look the main hooks provided by Vue.
 
 :::tip TIP
-Take into consideration that some of this methods doesn’t get called when doing server-side rendering
+Take into consideration that some of these methods doesn’t get called when doing server-side rendering
 :::
 
 ### beforeCreate
@@ -208,7 +208,7 @@ export default {
 
 ### beforeMount
 
-The beforeMount hook runs right before the initial render happens and after the template or render functions have been compiled.
+The ```beforeMount``` hook runs right before the initial render happens and after the template or render functions have been compiled.
 
 ```javascript
 export default {
@@ -220,7 +220,7 @@ export default {
 
 ### mounted
 
-This hook is called after the instance has been mounted. At this point you will have full access to the reactive component, templates, and rendered DOM (via. this.\$el). The most frequently used patterns are fetching data for your component (use created for this instead,) and modifying the DOM, often to integrate non-Vue libraries.
+This hook is called after the instance has been mounted. At this point you will have full access to the reactive component, templates, and rendered DOM (via ```this.$el```). The most frequently used patterns are fetching data for your component (use created for this instead,) and modifying the DOM, often to integrate non-Vue libraries.
 
 ```html
 <template>
@@ -238,7 +238,7 @@ export default {
 
 ### beforeUpdate
 
-This hook is called when data changes, before the DOM is patched. It allows you to get the new state of any reactive data on your component before it actually gets rendered
+This hook is called when data changes, before the DOM is patched. It allows you to get the new state of any reactive data on your component before it actually gets rendered.
 
 ```javascript
 export default {
@@ -301,7 +301,7 @@ This hook is called when a kept-alive component is deactivated.
 
 ### beforeDestroy
 
-This hook is called right before a Vue instance is destroyed. At this stage the instance is still fully functional. If you need to cleanup events or reactive subscriptions, beforeDestroy would probably be the time to do it.
+This hook is called right before a Vue instance is destroyed. At this stage the instance is still fully functional. If you need to cleanup events or reactive subscriptions, ```beforeDestroy``` would probably be the time to do it.
 
 ```javascript
 export default {
@@ -322,7 +322,7 @@ export default {
 
 ### destroyed
 
-This hook is called after a Vue instance has been destroyed. When this hook is called, all directives of the Vue instance have been unbound, all event listeners have been removed, and all child Vue instances have also been destroyed
+This hook is called after a Vue instance has been destroyed. When this hook is called, all directives of the Vue instance have been unbound, all event listeners have been removed, and all child Vue instances have also been destroyed.
 
 ```javascript
 import MyCreepyAnalyticsService from "./somewhere-bad";
