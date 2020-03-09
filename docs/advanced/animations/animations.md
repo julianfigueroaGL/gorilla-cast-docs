@@ -8,7 +8,7 @@ Just to clarify, Transitions and Animations differ, a `Transition` essencially w
 
 Hence `Animations` are very different, you are able to make that multiple states happen within a declaration.
 
-In other words, for projects with less complexity or very small ones, transitions is the right path. On the other hand, for larger apps with high complexity, you should use animations.
+In other words, for projects with less complexity or very small ones, transitions are the right path. On the other hand, for larger apps with high complexity, you should use animations.
 
 ## Additional Links
 

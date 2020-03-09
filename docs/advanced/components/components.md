@@ -76,12 +76,12 @@ Using Vuex you're implementing the Flux architecture.
 
 ### Dependency Injection
 
-There are two alternative Vue.js handles dependency injection modules:
+There are two alternatives on how Vue.js handles dependency injection modules:
 
 - vue-component: is very lightweight DI framework which allows you to register and manually or automatically inject anything anywhere.
-- vue-inject: is a bit more functional, it allows all what vue-component do. But also it does introduce simple service/factory/constant implementation with support of automatic injection (as argumens) of previously registered entities.
+- vue-inject: is a bit more functional, it allows all what vue-component do. But also it does introduce simple service/factory/constant implementation with automatic injection support (as arguments) for previously registered entities.
 
-We recommend to use `Vue-component` if you need a simple yet elegant DI solution for your application and `Vue-inject` if you miss ANgular-style injections or just need more versatile.
+We recommend to use `Vue-component` if you need a simple yet elegant DI solution for your application and `Vue-inject` if you miss Angular-style injections or just need more versatile.
 
 ### How to use the right pattern
 
