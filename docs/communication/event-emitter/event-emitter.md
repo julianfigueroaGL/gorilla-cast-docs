@@ -125,11 +125,11 @@ For these reasons, we recommend you **always use kebab-case for event names.**
 
 After taking a look at some interesting concepts about Event Emitting and Props, let's try to use these concepts in the tasks below:
 
-1. Let's integrate our track list component with our searchlightbox components, so that we can render our search results using our track list.
+1. Let's integrate our tracklist component with our searchlightbox component, so that we can render our search results using our track list.
 2. Let's add a new component to view more details about each track (as mentioned in the initial scope).
-3. Using the emitt patter, let's give it a try and build the favorite feature within our home.
+3. Using the emit pattern, let's give it a try and build the favorite feature within our home.
 4. Add favorites and podcasts full list pages.
-5. Connect the player component with other components using root events 
+5. Connect the player component with other components using root events.
 
 ## Resolution
 

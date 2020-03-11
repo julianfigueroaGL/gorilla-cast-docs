@@ -431,13 +431,13 @@ Here's the complete example:
 
 ## Project Tasks
 
-You might have notice the emitter patter to be useful, but also, to be hard to maintain and implement as your application gets complex. Let's implement a  Vuex patter and see hot it comes into place:
+You might have notice the emitter patter to be useful, but also, to be hard to maintain and implement as your application gets complex. Let's implement a  Vuex patter and see how it comes into place:
 
 1. Add Vuex store as main state source.
 
 ## Resolution
 
-Vuex is definitely a much more simpler approach when you need to communicate information between components, let's take a look a its implementation and benefits:
+Vuex is definitely a much more simpler approach when you need to communicate information between components, let's take a look at its implementation and benefits:
 
 1. [Vuex Store](https://github.com/gorillalogic/vuejs-training/pull/14)
 

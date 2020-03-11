@@ -353,7 +353,7 @@ Now that we know more advanced concepts about components that we can apply to le
 1. Base reusable components to start preparing our main logic. This includes the components below:
   - Search input component.
   - Search global (lightbox) component.
-  - Favorite button component
+  - Favorite button component.
   - Track list component.
 2. Also, take into consideration this sub-steps to integrate the functionality in our current skeleton (decide wisely the best place to integrate the right pieces):
 - Integrate search lightbox component in App Bar component.

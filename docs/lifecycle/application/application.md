@@ -176,10 +176,10 @@ It's time to start with our very first set of tasks to build our Podcast Player 
 
 1. Install a fresh Vue.js application using Vue CLI.
 2. Install Vuetify as a plugin.
-3. As an additional task, please include the file provided in the resolution step #3 in your folder's structure. This is the api you'll be using in the overall development process. We provide you with this tool with the intention of keep you focused on Vue.js related content.
+3. As an additional task, please include the file provided in the resolution step #3 in your folder's structure. This is the API you'll be using in the overall development process. We provide you with this tool with the intention of keep you focused on Vue.js related content.
 
 ::: tip TIP
-Run carefully each step of the configuration process while using the CLI
+Run carefully each step of the configuration process while using the CLI.
 :::
 
 ## Resolution

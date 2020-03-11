@@ -246,7 +246,7 @@ In case you are interested on deep diving the topics above, here are some useful
 
 ## Project Tasks
 
-Components are by far one of the basic but most powerfull tools Vue.js has to offer, actually on any UI framework, this concept leverages advanced desing patters and workflows. Now that we handle components, let's try to:
+Components are by far one of the basic but most powerful tools Vue.js has to offer, actually on any UI framework, this concept leverages advanced design patterns and workflows. Now that we handle components, let's try to:
 
 1. Build layout components as the base of the visual skeleton for our application. This includes:
 	- **Main Layout:** this is the component that should contain or wrap up all the application's content.
