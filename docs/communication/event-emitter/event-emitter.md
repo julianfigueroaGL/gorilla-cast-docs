@@ -120,3 +120,23 @@ For these reasons, we recommend you **always use kebab-case for event names.**
 ## Additional Links
 
 - Vue.js official docs - [Custom Events](https://vuejs.org/v2/guide/components-custom-events.html)
+
+## Project Tasks
+
+After taking a look at some interesting concepts about Event Emitting and Props, let's try to use these concepts in the tasks below:
+
+1. Let's integrate our track list component with our searchlightbox components, so that we can render our search results using our track list.
+2. Let's add a new component to view more details about each track (as mentioned in the initial scope).
+3. Using the emitt patter, let's give it a try and build the favorite feature within our home.
+4. Add favorites and podcasts full list pages.
+5. Connect the player component with other components using root events 
+
+## Resolution
+
+The re-usability in Vue.js plays a really important role, as we can give our application a more flexible, maintainable and performant structure. Also, the emitter patter is useful in multiple cases, but harder to maintain in some others. Let's take a look at the resolution for the tasks:
+
+1. [Refactor Searchlighbox Component](https://github.com/gorillalogic/vuejs-training/pull/9)
+2. [Add Track Details Component](https://github.com/gorillalogic/vuejs-training/pull/10)
+3. [Favorite Feature Home](https://github.com/gorillalogic/vuejs-training/pull/11)
+4. [Add Favorites and Podcasts Lists](https://github.com/gorillalogic/vuejs-training/pull/12)
+5. [Connect Player](https://github.com/gorillalogic/vuejs-training/pull/13)

@@ -246,9 +246,24 @@ In case you are interested on deep diving the topics above, here are some useful
 
 ## Project Tasks
 
-As described on the initial section, this Bootcamp is intended to be an experience while building a Vue.js based Podcast Player. Let's use the concepts we recently learnt to creat the basis for this app with the following tasks:
+Components are by far one of the basic but most powerfull tools Vue.js has to offer, actually on any UI framework, this concept leverages advanced desing patters and workflows. Now that we handle components, let's try to:
 
-1. Create folders structure using Vue CLI including vueitfy as main design system.
-2. Add a folder called API and use the include the utilies listed here as your main "fake" data provider.
-3. Create configuration files.
-4. Configure main base router.
+1. Build layout components as the base of the visual skeleton for our application. This includes:
+	- **Main Layout:** this is the component that should contain or wrap up all the application's content.
+	- **App Bar:** this is the bar at the top of the application that will eventually include a global search component.
+	- **Menu:** this is the main navigation panel, that will allow us to move in between sections.
+	- **Player Layout:** This will include the main skeleton for our player, that must be available in all views and contain the basic buttons.
+2. As we defined our Menu component, we must include the basic routes that we are going to handle in our app's workflow. Dashboard, list of tracks, list of favorites, details page and finally an about page.
+
+## Resolution
+
+Let's take a look at the resolution of the tasks above:
+
+1. [Main Layout Component](https://github.com/gorillalogic/vuejs-training/pull/4/commits/22da52dd77ff9cd2cd931559a5d2f84bbc0236b2)
+2. [App Bar Component](https://github.com/gorillalogic/vuejs-training/pull/4/commits/ddcb13a3e7f2ec6303ee57e078b6085fcfb3e156)
+3. [Refactor Code ](https://github.com/gorillalogic/vuejs-training/pull/4)
+4. [Menu Drawer Component](https://github.com/gorillalogic/vuejs-training/pull/5/commits/9af41a3b4d262f913d21c24f9863dbb386022d7d)
+5. [Refactor and Routing ](https://github.com/gorillalogic/vuejs-training/pull/5)
+
+
+In this resolution, you might see some other concepts that we haven't gone through, but will be explained later on.

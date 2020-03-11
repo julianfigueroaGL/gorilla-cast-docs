@@ -18,6 +18,17 @@ module.exports = {
 			['/intro/', 'Introduction'],
 			['/basics/', 'Basics'],
 			{
+				title: 'Routing',
+				collapsable: false,
+				sidebarDepth: 2,
+				children: [
+					['/routing/', 'Introduction'],
+					['/routing/basic-routing/basic-routing', 'Basic Routing'],
+					['/routing/dynamic-routing/dynamic-routing', 'Dynamic Routing'],
+					['/routing/lazy-loading/lazy-loading', 'Lazy Loading'],
+				]
+			},
+			{
 				title: 'Lifecycle',
 				collapsable: false,
 				sidebarDepth: 2,
@@ -26,8 +37,6 @@ module.exports = {
 					['/lifecycle/application/application', 'Application Setup'],
 					['/lifecycle/components/components', 'Components'],
 					['/lifecycle/hooks/hooks', 'Lifecycle Hooks'],
-					['/lifecycle/lifecycle-task/lifecycle-task', 'Project Task'],
-					['/lifecycle/resolution/resolution', 'Resolution']
 				]
 			},
 			{
@@ -38,21 +47,6 @@ module.exports = {
 					['/communication/', 'Introduction'],
 					['/communication/props/props', 'Props'],
 					['/communication/event-emitter/event-emitter', 'Event Emitter Pattern'],
-					['/communication/communication-task/communication-task', 'Project Tasks'],
-					['/communication/resolution/resolution', 'Resolution']
-				]
-			},
-			{
-				title: 'Routing',
-				collapsable: false,
-				sidebarDepth: 2,
-				children: [
-					['/routing/', 'Introduction'],
-					['/routing/basic-routing/basic-routing', 'Basic Routing'],
-					['/routing/dynamic-routing/dynamic-routing', 'Dynamic Routing'],
-					['/routing/lazy-loading/lazy-loading', 'Lazy Loading'],
-					['/routing/routing-task/routing-task', 'Project Tasks'],
-					['/routing/resolution/resolution', 'Resolution']
 				]
 			},
 			{
@@ -62,8 +56,6 @@ module.exports = {
 				children: [
 					['/stores/', 'Flux Pattern'],
 					['/stores/vuex/vuex', 'Vuex'],
-					['/stores/vuex-task/vuex-task', 'Project Tasks'],
-					['/stores/resolution/resolution', 'Resolution']
 				]
 			},
 			['/testing/', 'Testing'],

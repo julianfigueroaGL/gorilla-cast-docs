@@ -52,7 +52,7 @@ As its name describes, Vue.js command line interface is a powerful tool that all
 This documentation is referencing the updated @vue/cli.
 :::
 
-### Insallation
+### Installation
 
 The installation process is very straightforward whether using yarn or npm:
 
@@ -169,3 +169,23 @@ All the Vue components in this structure have been transformed from Single File 
 - [Plugins in Depth](https://vuejs.org/v2/guide/plugins.html#ad) Learn more about plugins and how to create your owns.
 - [Splitting Components](https://nullcast.io/split-vue-js-components-into-multiple-files/) Split components into multiple files.
 - [Vue CLI](https://cli.vuejs.org/guide/) Read more about this useul tool.
+
+## Project Tasks
+
+It's time to start with our very first set of tasks to build our Podcast Player application. Now that you've learnt the basic concepts of Vue.js, let's start building the application's skeleton:
+
+1. Install a fresh Vue.js application using Vue CLI.
+2. Install Vuetify as a plugin.
+3. As an additional task, please include the file provided in the resolution step #3 in your folder's structure. This is the api you'll be using in the overall development process. We provide you with this tool with the intention of keep you focused on Vue.js related content.
+
+::: tip TIP
+Run carefully each step of the configuration process while using the CLI
+:::
+
+## Resolution
+
+Let's take a look at our suggested resolution for this two main tasks:
+
+1. [Application Setup](https://github.com/gorillalogic/vuejs-training/pull/1/)
+2. [Vuetify Installation](https://github.com/gorillalogic/vuejs-training/pull/2)
+3. [API](https://github.com/gorillalogic/vuejs-training/pull/3)
