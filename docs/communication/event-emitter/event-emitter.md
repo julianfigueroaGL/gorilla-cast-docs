@@ -133,7 +133,7 @@ After taking a look at some interesting concepts about Event Emitting and Props,
 
 ## Resolution
 
-The re-usability in Vue.js plays a really important role, as we can give our application a more flexible, maintainable and performant structure. Also, the emitter patter is useful in multiple cases, but harder to maintain in some others. Let's take a look at the resolution for the tasks:
+The re-usability in Vue.js plays a really important role, as we can give our application a more flexible, maintainable and performant structure. Also, the emitter pattern is useful in multiple cases, but harder to maintain in some others. Let's take a look at the resolution for the tasks:
 
 1. [Refactor Searchlighbox Component](https://github.com/gorillalogic/vuejs-training/pull/9)
 2. [Add Track Details Component](https://github.com/gorillalogic/vuejs-training/pull/10)
