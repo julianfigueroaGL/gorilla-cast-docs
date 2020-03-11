@@ -431,7 +431,7 @@ Here's the complete example:
 
 ## Project Tasks
 
-You might have notice the emitter patter to be useful, but also, to be hard to maintain and implement as your application gets complex. Let's implement a  Vuex pattern and see how it comes into place:
+You might have notice the emitter pattern to be useful, but also, to be hard to maintain and implement as your application gets complex. Let's implement a  Vuex pattern and see how it comes into place:
 
 1. Add Vuex store as main state source.
 
