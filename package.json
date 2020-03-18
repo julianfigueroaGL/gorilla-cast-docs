@@ -8,7 +8,7 @@
 	},
 	"scripts": {
 		"docs:build": "vuepress build docs",
-		"deploy": "gh-pages -d public"
+		"deploy": "gh-pages -d dist"
 	},
 	"keywords": [],
 	"author": "",

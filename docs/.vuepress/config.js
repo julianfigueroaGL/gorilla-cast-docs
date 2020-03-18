@@ -1,9 +1,9 @@
 module.exports = {
 	title: 'Vue.js Bootcamp',
-	dest: './public',
-	base: '/gorilla-cast-docs/',
+	dest: './dist',
+	base: '/vuejs-training/',
 	themeConfig: {
-		repo: 'https://github.com/ogranadagl/gorilla-cast',
+		repo: 'https://github.com/gorillalogic/vuejs-training/bootcamp/',
 		repoLabel: 'Repo',
 		docsDir: 'src',
 		editLinks: false,
