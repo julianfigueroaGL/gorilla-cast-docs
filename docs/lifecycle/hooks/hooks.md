@@ -345,3 +345,27 @@ export default {
 - [Directives](https://012.vuejs.org/guide/directives.html) Directives in depth
 - [Data Binding](https://v1.vuejs.org/guide/syntax.html) Data Bindnig in depth
 - [Event Handling](https://vuejsdevelopers.com/2020/01/06/handling-events-vue-js/) Event Handling with Vue.js
+
+## Project Tasks
+
+Now that we know more advanced concepts about components that we can apply to leverage more complex logic in our app. That being said, let's create:
+
+1. Base reusable components to start preparing our main logic. This includes the components below:
+  - Search input component.
+  - Search global (lightbox) component.
+  - Favorite button component.
+  - Track list component.
+2. Also, take into consideration this sub-steps to integrate the functionality in our current skeleton (decide wisely the best place to integrate the right pieces):
+- Integrate search lightbox component in App Bar component.
+- Integrate track list component in home view.
+
+## Resolution
+
+The componentes we covered on this tasks section are really important to understand how can we implement reusability within Vue.js. Let's take a look to eah of the components and start to integrate them refactoring our code:
+
+1. [Search Input Component](https://github.com/gorillalogic/vuejs-training/pull/7/commits/e967fa61821cfc7bb1de5b5b030dd2f21d70c457)
+2. [Search Lightbox Component](https://github.com/gorillalogic/vuejs-training/pull/7/commits/9e10600415185cc2d795eae2d247cecf2bae9fb7)
+3. [Refactor App Bar Component](https://github.com/gorillalogic/vuejs-training/pull/7)
+4. [Favorite Button Component](https://github.com/gorillalogic/vuejs-training/pull/8/commits/db4f8401b8dbb2d67b085282967ddf2d927e9172)
+5. [TrackList Component](https://github.com/gorillalogic/vuejs-training/pull/8/commits/d08c7fb4ccab3088a3ee029ea1bccad9402ee8dc)
+6. [Utilities and Refactor Code](https://github.com/gorillalogic/vuejs-training/pull/8)
